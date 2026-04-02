@@ -1,0 +1,21 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: "Cloud Data Services Governance Model"
+  sidebar:
+    pinned: true
+    align: center
+    title: "Cloud Data Services Governance Model"
+    logo: graphics/nasa-logo.png
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: contributing.qmd
+        text: Contributing
+
+format:
+  html:
+    theme: nasa.scss
+    toc: true
