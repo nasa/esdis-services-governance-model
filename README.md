@@ -31,7 +31,14 @@ To preview the site locally:
 quarto preview
 ```
 
-CI/CD will be configured to publish the rendered documentation to GitHub pages.
+## CI/CD
+
+CI/CD is configured to publish the rendered documentation to GitHub pages:
+
+* `.github/workflows/pr-preview.yml` - builds the documentation website from the
+  branch under review, providing a link to the outputs from that build.
+* `.github/workflows/publish.yml` - Publishes a new version of the documentation
+  when a PR is merged into the `main` branch.
 
 ## pre-commit
 
