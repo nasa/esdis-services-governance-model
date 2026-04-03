@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "contributing.html",
+    "href": "contributing.html",
+    "title": "Contributing",
+    "section": "",
+    "text": "We welcome PRs to this repo from anyone. If you open a PR with new or revised content, please add yourself to the authors list in index.qmd.\nThis site uses Quarto to generate website pages using markdown and Jupyter notebooks.",
+    "crumbs": [
+      "Contributing"
+    ]
+  },
+  {
+    "objectID": "contributing.html#adding-pages",
+    "href": "contributing.html#adding-pages",
+    "title": "Contributing",
+    "section": "Adding pages",
+    "text": "Adding pages\nTo add a new page:\n\nCreate new .qmd or .ipynb file\nAdd the new page to the sidebar section in _quarto.yml so it shows up in the sidebar navigation",
+    "crumbs": [
+      "Contributing"
+    ]
+  },
+  {
+    "objectID": "contributing.html#previews",
+    "href": "contributing.html#previews",
+    "title": "Contributing",
+    "section": "Previews",
+    "text": "Previews\nTo preview changes, you can run this site locally (see instructions to setup quarto locally below) or use the automated preview generation when opening a PR (see the PR preview workflow).",
+    "crumbs": [
+      "Contributing"
+    ]
+  },
+  {
+    "objectID": "contributing.html#local-development",
+    "href": "contributing.html#local-development",
+    "title": "Contributing",
+    "section": "Local Development",
+    "text": "Local Development\n\nInstall Quarto\nInstall Quarto by downloading the installer for your platform from quarto.org/docs/get-started, or via a package manager:\n\nmacOS (Homebrew): brew install --cask quarto\nLinux: Download the .deb or .rpm package from the Quarto website\nWindows: Download the .msi installer from the Quarto website\n\nVerify the installation with quarto check.\n\n\nRun quarto commands\nTo preview the site locally:\nquarto preview\nThis runs quarto preview, which serves the site and reloads on changes.",
+    "crumbs": [
+      "Contributing"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Cloud Data Services Governance Model",
+    "section": "",
+    "text": "⚠️ UNDER DEVELOPMENT ⚠️",
+    "crumbs": [
+      "Home"
+    ]
+  }
+]
