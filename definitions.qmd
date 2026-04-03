@@ -1,0 +1,15 @@
+---
+title: "Definitions"
+---
+
+| Term | Defintion |
+|:-----|:----------|
+| DAAC | Distributed Active Archive Center |
+| EED-3 | EOSDIS Evolution and Development-3 |
+| EOSDIS | Earth Observing System Data and Information System |
+| ESDIS Project| Earth Science Data and Information System Project |
+| ESDS | Earth Science Data System |
+| SAFe |  Scaled Agile Framework |
+| SIT | System Integration Testing |
+| TRT | Transformation Train |
+| UAT | User Acceptance Testing |

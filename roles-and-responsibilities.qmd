@@ -1,0 +1,66 @@
+---
+title: "Roles and Responsibilities"
+---
+
+## Everyone
+
+* Communicate, communicate, communicate. Especially for new releases and regression test failures.
+* Fix regression test failures quickly. Work with impacted team(s)/DAAC(s) to ensure need-by dates are met depending on bug criticality.
+* Respond to PRs quickly.
+* Respond to questions in Slack, via email, or GitHub quickly. If you don’t know the answer but know someone who does, connect with them!
+* Move the whole community forward by submitting JIRA tickets and/or fixing problems yourself by submitting PRs!
+  * "You can submit PRs for the fix, or you can ask the maintainers of the code to fix it. Most importantly, fix it in the source repo so everyone wins."
+  * If a team either doesn't have the bandwidth or expertise to submit a PR itself, that's okay, but the alternative should be communication about the issue first in Slack/email, and then a Jira ticket with your team's priority label (see [Enterprise Priority List](https://wiki.earthdata.nasa.gov/display/EPS/Enterprise+Priority+Lists)) to make sure there is visibility. If the issue is only being communicated in Slack then train leads have a much harder time moving it forward!
+
+## Transformation Train Leadership
+
+* Ensure the governance model:
+  * is being upheld across each of our roles.
+  * evolves to remain applicable to our services and their associated roles.
+* Provide other SAFe trains with requirements needed for our cloud services.
+* Communicate and prioritize features for cloud services, as well as dependent features on Search and Discovery Train.
+* Facilitate communication within TRT and across SAFe teams.
+* Utilize the Enterprise Priority List to ensure DAAC-reported bug tickets are prioritised by the appropriate development teams. Train leadership should:
+  * Regularly check for new tickets that match the Transformation Train priority filter, and ensure this work is appropriately assigned and prioritised.
+  * Communicate with other trains to ensure tickets from Transformation Train teams to an external train team are being prioritised and worked.
+  * Facilitate good communication between stakeholders and (potentially multiple) development teams.
+
+## Service Team
+
+* Schedule software releases at a regular cadence, nominally every two weeks.
+  * Communicate those releases in the slack channel(s) listed on the [Transformation Train Org](https://wiki.earthdata.nasa.gov/display/EPS/Transformation+Train+Org) page, including breaking changes (e.g., API or message schema changes)
+  * Coordinate with DAACs to ensure testing or support materials are tested and updated upon release.
+* Establish automated monitoring for your service or application:
+  * Ensure Uptrends is set up such that all endpoints are being monitored and your team is receiving outage notifications. To request permissions to use and configure this tool, submit an [Earthdata Service Desk](https://bugs.earthdata.nasa.gov/servicedesk/customer/portal/5/create/16) ticket with “Uptrends” selected.
+* Strive for 99.9% operational uptime availability. If your service experiences an interruption:
+  * Communicate by posting to #outages and the Slack channel(s) listed on the [Transformation Train Org](https://wiki.earthdata.nasa.gov/display/EPS/Transformation+Train+Org) page with impact and expected resolution.
+  * Work to regain nominal operations as your team's top priority
+  * For more information see Common Ownership Scenario 2.
+* Support usage metrics in the Cloud Metrics system. Work with train leads to prioritize Cloud Metrics onboarding if this is not already established.
+* Maintain a set of sample data in all testing (SIT and UAT) environments. These data should be sufficient to enable testing of all features of the service, allowing your service team to work independently from DAAC-hosted data. It is not required (or indeed feasible) for the service team to maintain sample data representing all potential collections that could be associated with the service.
+* Identify appropriate sample data in production that can be used for testing, particularly regression testing. Such data are likely to be hosted by the DAAC and should be identified based on the ability to exercise the feature of the service, while having a high likelihood that the data will persist in the same state in the long-term.
+* Support end-users by:
+  * Setting up a Zendesk for your service
+  * Connecting your service to the Earthdata Forum:
+    * Add your service as a tag within the Earthdata Forum to get notified of related posts
+    * Set up team forum badges to respond as experts / SMEs within the forum
+* Publish your code to NASA’s public, open-source GitHub organization with included contribution guidance. Approval must be sought to publish NASA-funded software to an open-source location. The exact details of this approval process can vary between different teams, such as different DAACs or EED. Typically, this approval process can take 6 months to 2 years, so a common workflow is to first host the code and release artifacts in private repositories, whilst undergoing the open-source approval process. Once that process is completed, and approval granted, then the repository, CI/CD pipeline and release artifacts can be migrated to open-source locations. See [this wiki page](https://wiki.earthdata.nasa.gov/display/ESEC/ESEC-12+Open+Source+Approval) for more information on the open-source approval process.
+* Utilize the [Enterprise Priority List](https://wiki.earthdata.nasa.gov/display/EPS/Enterprise+Priority+Lists) to ensure requests are being prioritized and addressed
+* Ensure built-in quality for your services:
+  * Cloud hosted services are expected to scan requirements files for vulnerabilities with the NASA ESDIS Snyk instance. This includes, for example, pip or conda requirements files for Python-based projects, or package.json for Node.JS projects. [Any resolvable vulnerabilities detected by Snyk that are classified as “critical” or “high” severity should be fixed within 15 days](https://wiki.earthdata.nasa.gov/display/ESKB/Security+Guidance+for+Dependency+Vulnerabilities+-+Snyk).
+  * Unit test coverage is expected to meet the minimum threshold of 80%, with passing tests being a blocking requirement for merging pull requests in the CI/CD pipeline for the source code repository.
+* Strive to make the service generic, avoiding dataset-specific branches of code within the service where possible. This also facilitates easier maintenance as services expand to provide transformation of datasets from multiple DAACs.
+
+## Dataset Owners
+
+* Utilize the [Enterprise Priority List](https://wiki.earthdata.nasa.gov/display/EPS/Enterprise+Priority+Lists) to request features and/or contribute to the service code in coordination with the responsible development team.
+* Maintain a set of test data and metadata in UAT, which is visible to and usable by all stakeholders, including the following tasks:
+  * Creation of UMM-C record.
+  * Ingest of granule files into the archive.
+  * Creation of UMM-G records for each granule.
+  * Creation of UMM-Var records for variables requiring subsetting support, along with association of those UMM-Var records with the UMM-C record.
+  * Configure data such that it is visible to service teams (e.g., network/endpoint exceptions, Earthdata Login configuration, and CMR permissions configuration as described [here](https://wiki.earthdata.nasa.gov/display/TRT/Getting+Started+with+Services+in+the+Cloud)).
+  * Communicate test cases requiring specific test data to data/metadata curators, so that they can be ingested.
+* Ensure the in-progress [Definition of Done](https://wiki.earthdata.nasa.gov/display/TRT/Definition+of+Done+for+Cloud+Services) is followed when onboarding or publishing a new collection to a given service, including metadata curation, tool interoperability, and in-place analysis verification
+* Identify issues upon initial testing of a new collection with a given service. Such issues should be reported to the service team, and be captured as new issue or feature work in Jira, allowing the development to be prioritized by the service team.
+* Communicate end-user feedback, including bugs and feature requests, to the applicable service team(s) to ensure updates are identified and prioritized as needed.

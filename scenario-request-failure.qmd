@@ -1,0 +1,17 @@
+---
+title: "Scenario: Service request failure"
+---
+
+A service request may fail due to several reasons, including:
+
+* A bug is introduced to the service
+* A service interruption occurs, impacting the entire service
+  * This may include an issue with an external component that is impacting the service itself
+* The specific service request and data granule combination is not currently supported:
+  * There could be user error (e.g. attempting a request that is documented to not work)
+  * The request combination was not tested prior to configuring in production
+  * There is a known issue with the service
+
+Generally, the DAAC data provider team responsible for the given collection(s) is also responsible for monitoring and identifying these failures, or they may also be reported by another team or external user. Initial investigation is then needed to determine the root cause, which is the primary responsibility of the service team.
+
+Refer to the prior workflow diagrams for bug or interruption causes. In the case of additional support needed for a given service/collection combination, refer to either the dataset onboarding or new feature request workflows. In the case of Harmony which relies on CMR associations between UMM-S, UMM-Var, and UMM-C, it is the responsibility of the DAAC data provider team to manage and ensure removal of any unwanted associations until the issue is resolved.

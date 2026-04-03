@@ -1,0 +1,12 @@
+---
+title: "Resources"
+---
+
+### Additional Open Source Community Development Guides:
+
+* [Modern Scientific Data Governance Framework](https://github.com/NASA-IMPACT/modern-dgf)
+* [rOpenSci](https://contributing.ropensci.org/)
+* [NOAA FIMS Developer Guide](https://noaa-fims.github.io/collaborative_workflow/contributor-guidelines.html)
+* [xarray Contributing Guide](https://docs.xarray.dev/en/stable/contributing.html)
+* [Pangeo Forge Development Guide](https://pangeo-forge.readthedocs.io/en/latest/pangeo_forge_recipes/development/development_guide.html)
+* [Openscapes Champions Program presentation on Open Communities](https://docs.google.com/presentation/d/1u6AjCCKniDsuX10M-qAU2O1HLJqupDYhWWKZYfeCpK4/edit#slide=id.g22699560795_0_114)

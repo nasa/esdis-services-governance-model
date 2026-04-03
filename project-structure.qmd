@@ -1,0 +1,12 @@
+---
+title: "Project Structure and Architecture"
+---
+
+## Organizational Model
+
+![Project Structure adapted from [EOSDIS General Open Source Software Collaboration and Contribution Process](https://esipfed.github.io/esds-community-guide/contribution-guide/#code-contribution-roles-and-responsibilities): This diagram lays out the relationships between the various roles across our cloud data services community, showing how each role interacts at a high level.
+](./graphics/organisation.png){#fig-organisation}
+
+## Cloud Data Services Landscape
+
+![Earthdata Cloud services architecture across programmatic services, clients, and user interfaces. Dashed lines are used to distinguish the crossing over another solid line. Earthdata Login is not indicated here for simplicity. Note: This is incomplete as of 18 March 2024 and will continue to be refined in future iterations. ](./graphics/trt-landscape.png){#fig-landscape}

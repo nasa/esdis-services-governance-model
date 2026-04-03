@@ -1,0 +1,7 @@
+---
+title: "Scenario: Bug is introduced to a service"
+---
+
+### Workflow
+
+![Service bug identification to resolution workflow](./graphics/service-bug.png){#fig-service-bug}
