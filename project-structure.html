@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Cloud Data Services Governance Model</title>
+<title>Project Structure and Architecture – Cloud Data Services Governance Model</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -32,7 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./project-structure.html" rel="next">
+<link href="./roles-and-responsibilities.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./project-structure.html">Project Structure</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -114,13 +115,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project-structure.html" class="sidebar-item-text sidebar-link">
+  <a href="./project-structure.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Project Structure</span></a>
   </div>
 </li>
@@ -217,8 +218,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#values" id="toc-values" class="nav-link" data-scroll-target="#values">Values</a></li>
+  <li><a href="#organizational-model" id="toc-organizational-model" class="nav-link active" data-scroll-target="#organizational-model">Organizational Model</a></li>
+  <li><a href="#cloud-data-services-landscape" id="toc-cloud-data-services-landscape" class="nav-link" data-scroll-target="#cloud-data-services-landscape">Cloud Data Services Landscape</a></li>
   </ul>
 </nav>
     </div>
@@ -227,19 +228,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Cloud Data Services Governance Model</h1>
+<h1 class="title">Project Structure and Architecture</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Owen Littlejohns, Daine Wright, Heather Grams, Amy Steiker </p>
-          </div>
-  </div>
     
   
     
@@ -250,27 +245,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This Governance Model provides community development guidance for NASA Earthdata Cloud Data Services with the goals of:</p>
-<ol type="1">
-<li>Establishing roles and responsibilities for contributions to cloud services.</li>
-<li>Identifying key communication flows, as well as information on documentation, testing, and deployment paradigms.</li>
-<li>Outlining high-level process expectations for contributions.</li>
-<li>Providing example process flows and ownership scenarios for cloud service contributions.</li>
-</ol>
-<p>For the purposes of this document, we define and scope our community to the teams within the NASA DAACs and EED-3 contract supporting the data, services, and applications managed under NASA ESDIS. See our <a href="./definitions.html">Definitions</a> section for more information.</p>
-<p>Our core values and best practices are modelled from the <a href="https://esipfed.github.io/esds-community-guide/community-guide/">ESDS Community Development Best Practices Guide</a>, with inspiration from many other successful open source communities (see <a href="./resources.html">Resources</a>). Our goals and process guidelines are also inspired by the <a href="https://esipfed.github.io/esds-community-guide/contribution-guide/">EOSDIS General Open Source Software Collaboration and Contribution Process guide</a>.</p>
+<section id="organizational-model" class="level2">
+<h2 class="anchored" data-anchor-id="organizational-model">Organizational Model</h2>
+<div id="fig-organisation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-organisation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./graphics/organisation.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-organisation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Project Structure adapted from <a href="https://esipfed.github.io/esds-community-guide/contribution-guide/#code-contribution-roles-and-responsibilities">EOSDIS General Open Source Software Collaboration and Contribution Process</a>: This diagram lays out the relationships between the various roles across our cloud data services community, showing how each role interacts at a high level.
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="values" class="level2">
-<h2 class="anchored" data-anchor-id="values">Values</h2>
-<p>The development community for Earthdata Cloud Services was built around the core principle of “sharing is caring.” The NASA Earthdata Cloud provides us with an opportunity to not only make it easier for scientists to retrieve the data they need, but also to reduce barriers for code reuse and sharing of domain knowledge. We also embrace agility, and accept that it’s okay not knowing all the answers today as long as we work together to identify challenges and develop solutions. We share the same values as the ESDS Community Development Best Practices Guide and NASA’s Open Source Science Initiative. For more details please visit those pages.</p>
-<p>Additionally, we recognize that a successful project hinges on open, collaborative communication in order to foster trust across our community. We additionally uphold these principles in all aspects of our work:</p>
-<ul>
-<li>Make Everyone Feel Welcome</li>
-<li>Be Responsive</li>
-<li>Give More Than You Take</li>
-</ul>
+<section id="cloud-data-services-landscape" class="level2">
+<h2 class="anchored" data-anchor-id="cloud-data-services-landscape">Cloud Data Services Landscape</h2>
+<div id="fig-landscape" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-landscape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./graphics/trt-landscape.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-landscape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Earthdata Cloud services architecture across programmatic services, clients, and user interfaces. Dashed lines are used to distinguish the crossing over another solid line. Earthdata Login is not indicated here for simplicity. Note: This is incomplete as of 18 March 2024 and will continue to be refined in future iterations.
+</figcaption>
+</figure>
+</div>
 
 
 </section>
@@ -678,10 +677,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Home">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Home</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./project-structure.html" class="pagination-link" aria-label="Project Structure">
-        <span class="nav-page-text">Project Structure</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./roles-and-responsibilities.html" class="pagination-link" aria-label="Roles and Responsibilities">
+        <span class="nav-page-text">Roles and Responsibilities</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

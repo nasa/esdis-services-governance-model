@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Cloud Data Services Governance Model</title>
+<title>Roles and Responsibilities – Cloud Data Services Governance Model</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -32,7 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./project-structure.html" rel="next">
+<link href="./scenario-product-onboarding.html" rel="next">
+<link href="./project-structure.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./roles-and-responsibilities.html">Roles and Responsibilities</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -114,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -126,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./roles-and-responsibilities.html" class="sidebar-item-text sidebar-link">
+  <a href="./roles-and-responsibilities.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Roles and Responsibilities</span></a>
   </div>
 </li>
@@ -217,8 +218,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#values" id="toc-values" class="nav-link" data-scroll-target="#values">Values</a></li>
+  <li><a href="#everyone" id="toc-everyone" class="nav-link active" data-scroll-target="#everyone">Everyone</a></li>
+  <li><a href="#transformation-train-leadership" id="toc-transformation-train-leadership" class="nav-link" data-scroll-target="#transformation-train-leadership">Transformation Train Leadership</a></li>
+  <li><a href="#service-team" id="toc-service-team" class="nav-link" data-scroll-target="#service-team">Service Team</a></li>
+  <li><a href="#dataset-owners" id="toc-dataset-owners" class="nav-link" data-scroll-target="#dataset-owners">Dataset Owners</a></li>
   </ul>
 </nav>
     </div>
@@ -227,19 +230,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Cloud Data Services Governance Model</h1>
+<h1 class="title">Roles and Responsibilities</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Owen Littlejohns, Daine Wright, Heather Grams, Amy Steiker </p>
-          </div>
-  </div>
     
   
     
@@ -250,26 +247,95 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This Governance Model provides community development guidance for NASA Earthdata Cloud Data Services with the goals of:</p>
-<ol type="1">
-<li>Establishing roles and responsibilities for contributions to cloud services.</li>
-<li>Identifying key communication flows, as well as information on documentation, testing, and deployment paradigms.</li>
-<li>Outlining high-level process expectations for contributions.</li>
-<li>Providing example process flows and ownership scenarios for cloud service contributions.</li>
-</ol>
-<p>For the purposes of this document, we define and scope our community to the teams within the NASA DAACs and EED-3 contract supporting the data, services, and applications managed under NASA ESDIS. See our <a href="./definitions.html">Definitions</a> section for more information.</p>
-<p>Our core values and best practices are modelled from the <a href="https://esipfed.github.io/esds-community-guide/community-guide/">ESDS Community Development Best Practices Guide</a>, with inspiration from many other successful open source communities (see <a href="./resources.html">Resources</a>). Our goals and process guidelines are also inspired by the <a href="https://esipfed.github.io/esds-community-guide/contribution-guide/">EOSDIS General Open Source Software Collaboration and Contribution Process guide</a>.</p>
-</section>
-<section id="values" class="level2">
-<h2 class="anchored" data-anchor-id="values">Values</h2>
-<p>The development community for Earthdata Cloud Services was built around the core principle of “sharing is caring.” The NASA Earthdata Cloud provides us with an opportunity to not only make it easier for scientists to retrieve the data they need, but also to reduce barriers for code reuse and sharing of domain knowledge. We also embrace agility, and accept that it’s okay not knowing all the answers today as long as we work together to identify challenges and develop solutions. We share the same values as the ESDS Community Development Best Practices Guide and NASA’s Open Source Science Initiative. For more details please visit those pages.</p>
-<p>Additionally, we recognize that a successful project hinges on open, collaborative communication in order to foster trust across our community. We additionally uphold these principles in all aspects of our work:</p>
+<section id="everyone" class="level2">
+<h2 class="anchored" data-anchor-id="everyone">Everyone</h2>
 <ul>
-<li>Make Everyone Feel Welcome</li>
-<li>Be Responsive</li>
-<li>Give More Than You Take</li>
+<li>Communicate, communicate, communicate. Especially for new releases and regression test failures.</li>
+<li>Fix regression test failures quickly. Work with impacted team(s)/DAAC(s) to ensure need-by dates are met depending on bug criticality.</li>
+<li>Respond to PRs quickly.</li>
+<li>Respond to questions in Slack, via email, or GitHub quickly. If you don’t know the answer but know someone who does, connect with them!</li>
+<li>Move the whole community forward by submitting JIRA tickets and/or fixing problems yourself by submitting PRs!
+<ul>
+<li>“You can submit PRs for the fix, or you can ask the maintainers of the code to fix it. Most importantly, fix it in the source repo so everyone wins.”</li>
+<li>If a team either doesn’t have the bandwidth or expertise to submit a PR itself, that’s okay, but the alternative should be communication about the issue first in Slack/email, and then a Jira ticket with your team’s priority label (see <a href="https://wiki.earthdata.nasa.gov/display/EPS/Enterprise+Priority+Lists">Enterprise Priority List</a>) to make sure there is visibility. If the issue is only being communicated in Slack then train leads have a much harder time moving it forward!</li>
+</ul></li>
+</ul>
+</section>
+<section id="transformation-train-leadership" class="level2">
+<h2 class="anchored" data-anchor-id="transformation-train-leadership">Transformation Train Leadership</h2>
+<ul>
+<li>Ensure the governance model:
+<ul>
+<li>is being upheld across each of our roles.</li>
+<li>evolves to remain applicable to our services and their associated roles.</li>
+</ul></li>
+<li>Provide other SAFe trains with requirements needed for our cloud services.</li>
+<li>Communicate and prioritize features for cloud services, as well as dependent features on Search and Discovery Train.</li>
+<li>Facilitate communication within TRT and across SAFe teams.</li>
+<li>Utilize the Enterprise Priority List to ensure DAAC-reported bug tickets are prioritised by the appropriate development teams. Train leadership should:
+<ul>
+<li>Regularly check for new tickets that match the Transformation Train priority filter, and ensure this work is appropriately assigned and prioritised.</li>
+<li>Communicate with other trains to ensure tickets from Transformation Train teams to an external train team are being prioritised and worked.</li>
+<li>Facilitate good communication between stakeholders and (potentially multiple) development teams.</li>
+</ul></li>
+</ul>
+</section>
+<section id="service-team" class="level2">
+<h2 class="anchored" data-anchor-id="service-team">Service Team</h2>
+<ul>
+<li>Schedule software releases at a regular cadence, nominally every two weeks.
+<ul>
+<li>Communicate those releases in the slack channel(s) listed on the <a href="https://wiki.earthdata.nasa.gov/display/EPS/Transformation+Train+Org">Transformation Train Org</a> page, including breaking changes (e.g., API or message schema changes)</li>
+<li>Coordinate with DAACs to ensure testing or support materials are tested and updated upon release.</li>
+</ul></li>
+<li>Establish automated monitoring for your service or application:
+<ul>
+<li>Ensure Uptrends is set up such that all endpoints are being monitored and your team is receiving outage notifications. To request permissions to use and configure this tool, submit an <a href="https://bugs.earthdata.nasa.gov/servicedesk/customer/portal/5/create/16">Earthdata Service Desk</a> ticket with “Uptrends” selected.</li>
+</ul></li>
+<li>Strive for 99.9% operational uptime availability. If your service experiences an interruption:
+<ul>
+<li>Communicate by posting to #outages and the Slack channel(s) listed on the <a href="https://wiki.earthdata.nasa.gov/display/EPS/Transformation+Train+Org">Transformation Train Org</a> page with impact and expected resolution.</li>
+<li>Work to regain nominal operations as your team’s top priority</li>
+<li>For more information see Common Ownership Scenario 2.</li>
+</ul></li>
+<li>Support usage metrics in the Cloud Metrics system. Work with train leads to prioritize Cloud Metrics onboarding if this is not already established.</li>
+<li>Maintain a set of sample data in all testing (SIT and UAT) environments. These data should be sufficient to enable testing of all features of the service, allowing your service team to work independently from DAAC-hosted data. It is not required (or indeed feasible) for the service team to maintain sample data representing all potential collections that could be associated with the service.</li>
+<li>Identify appropriate sample data in production that can be used for testing, particularly regression testing. Such data are likely to be hosted by the DAAC and should be identified based on the ability to exercise the feature of the service, while having a high likelihood that the data will persist in the same state in the long-term.</li>
+<li>Support end-users by:
+<ul>
+<li>Setting up a Zendesk for your service</li>
+<li>Connecting your service to the Earthdata Forum:
+<ul>
+<li>Add your service as a tag within the Earthdata Forum to get notified of related posts</li>
+<li>Set up team forum badges to respond as experts / SMEs within the forum</li>
+</ul></li>
+</ul></li>
+<li>Publish your code to NASA’s public, open-source GitHub organization with included contribution guidance. Approval must be sought to publish NASA-funded software to an open-source location. The exact details of this approval process can vary between different teams, such as different DAACs or EED. Typically, this approval process can take 6 months to 2 years, so a common workflow is to first host the code and release artifacts in private repositories, whilst undergoing the open-source approval process. Once that process is completed, and approval granted, then the repository, CI/CD pipeline and release artifacts can be migrated to open-source locations. See <a href="https://wiki.earthdata.nasa.gov/display/ESEC/ESEC-12+Open+Source+Approval">this wiki page</a> for more information on the open-source approval process.</li>
+<li>Utilize the <a href="https://wiki.earthdata.nasa.gov/display/EPS/Enterprise+Priority+Lists">Enterprise Priority List</a> to ensure requests are being prioritized and addressed</li>
+<li>Ensure built-in quality for your services:
+<ul>
+<li>Cloud hosted services are expected to scan requirements files for vulnerabilities with the NASA ESDIS Snyk instance. This includes, for example, pip or conda requirements files for Python-based projects, or package.json for Node.JS projects. <a href="https://wiki.earthdata.nasa.gov/display/ESKB/Security+Guidance+for+Dependency+Vulnerabilities+-+Snyk">Any resolvable vulnerabilities detected by Snyk that are classified as “critical” or “high” severity should be fixed within 15 days</a>.</li>
+<li>Unit test coverage is expected to meet the minimum threshold of 80%, with passing tests being a blocking requirement for merging pull requests in the CI/CD pipeline for the source code repository.</li>
+</ul></li>
+<li>Strive to make the service generic, avoiding dataset-specific branches of code within the service where possible. This also facilitates easier maintenance as services expand to provide transformation of datasets from multiple DAACs.</li>
+</ul>
+</section>
+<section id="dataset-owners" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-owners">Dataset Owners</h2>
+<ul>
+<li>Utilize the <a href="https://wiki.earthdata.nasa.gov/display/EPS/Enterprise+Priority+Lists">Enterprise Priority List</a> to request features and/or contribute to the service code in coordination with the responsible development team.</li>
+<li>Maintain a set of test data and metadata in UAT, which is visible to and usable by all stakeholders, including the following tasks:
+<ul>
+<li>Creation of UMM-C record.</li>
+<li>Ingest of granule files into the archive.</li>
+<li>Creation of UMM-G records for each granule.</li>
+<li>Creation of UMM-Var records for variables requiring subsetting support, along with association of those UMM-Var records with the UMM-C record.</li>
+<li>Configure data such that it is visible to service teams (e.g., network/endpoint exceptions, Earthdata Login configuration, and CMR permissions configuration as described <a href="https://wiki.earthdata.nasa.gov/display/TRT/Getting+Started+with+Services+in+the+Cloud">here</a>).</li>
+<li>Communicate test cases requiring specific test data to data/metadata curators, so that they can be ingested.</li>
+</ul></li>
+<li>Ensure the in-progress <a href="https://wiki.earthdata.nasa.gov/display/TRT/Definition+of+Done+for+Cloud+Services">Definition of Done</a> is followed when onboarding or publishing a new collection to a given service, including metadata curation, tool interoperability, and in-place analysis verification</li>
+<li>Identify issues upon initial testing of a new collection with a given service. Such issues should be reported to the service team, and be captured as new issue or feature work in Jira, allowing the development to be prioritized by the service team.</li>
+<li>Communicate end-user feedback, including bugs and feature requests, to the applicable service team(s) to ensure updates are identified and prioritized as needed.</li>
 </ul>
 
 
@@ -678,10 +744,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./project-structure.html" class="pagination-link" aria-label="Project Structure">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Project Structure</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./project-structure.html" class="pagination-link" aria-label="Project Structure">
-        <span class="nav-page-text">Project Structure</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./scenario-product-onboarding.html" class="pagination-link" aria-label="Product Onboarding">
+        <span class="nav-page-text">Product Onboarding</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
