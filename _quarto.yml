@@ -12,6 +12,32 @@ website:
     contents:
       - href: index.qmd
         text: Home
+      - href: project-structure.qmd
+        text: Project Structure
+      - href: roles-and-responsibilities.qmd
+        text: Roles and Responsibilities
+      - section: Ownership Scenarios
+        contents:
+          - href: scenario-product-onboarding.qmd
+            text: Product Onboarding
+          - href: scenario-new-feature.qmd
+            text: New Service Feature
+          - href: scenario-request-failure.qmd
+            text: Request Failure
+          - href: scenario-bug.qmd
+            text: Service Bug
+          - href: scenario-service-interruption.qmd
+            text: Service Interruption
+      - href: environments.qmd
+        text: Environments
+      - href: communication.qmd
+        text: Communication
+      - href: development.qmd
+        text: Development
+      - href: resources.qmd
+        text: Resources
+      - href: definitions.qmd
+        text: Definitions
       - href: contributing.qmd
         text: Contributing
 

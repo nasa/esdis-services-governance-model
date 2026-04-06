@@ -1,0 +1,12 @@
+---
+title: "Development and Maintenance"
+---
+
+Maintaining a service includes tasks such as:
+
+* Software development of features prioritized through the SAFe Transformation Train and the WSJF process.
+* Bug fixes.
+* Vulnerability monitoring and remediation.
+* Unit test coverage.
+* Regression test coverage (per the scope determined in the “Overall Roles and Responsibilities” section).
+* Documentation.

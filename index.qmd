@@ -3,4 +3,24 @@ title: "Cloud Data Services Governance Model"
 authors: Owen Littlejohns, Daine Wright, Heather Grams, Amy Steiker
 ---
 
-⚠️ UNDER DEVELOPMENT ⚠️
+## Overview
+This Governance Model provides community development guidance for NASA Earthdata Cloud Data Services with the goals of:
+
+1. Establishing roles and responsibilities for contributions to cloud services.
+1. Identifying key communication flows, as well as information on documentation, testing, and deployment paradigms.
+1. Outlining high-level process expectations for contributions.
+1. Providing example process flows and ownership scenarios for cloud service contributions.
+
+For the purposes of this document, we define and scope our community to the teams within the NASA DAACs and EED-3 contract supporting the data, services, and applications managed under NASA ESDIS. See our [Definitions](./definitions.qmd) section for more information.
+
+Our core values and best practices are modelled from the [ESDS Community Development Best Practices Guide](https://esipfed.github.io/esds-community-guide/community-guide/), with inspiration from many other successful open source communities (see [Resources](./resources.qmd)). Our goals and process guidelines are also inspired by the [EOSDIS General Open Source Software Collaboration and Contribution Process guide](https://esipfed.github.io/esds-community-guide/contribution-guide/).
+
+## Values
+
+The development community for Earthdata Cloud Services was built around the core principle of “sharing is caring.” The NASA Earthdata Cloud provides us with an opportunity to not only make it easier for scientists to retrieve the data they need, but also to reduce barriers for code reuse and sharing of domain knowledge. We also embrace agility, and accept that it’s okay not knowing all the answers today as long as we work together to identify challenges and develop solutions. We share the same values as the ESDS Community Development Best Practices Guide and NASA's Open Source Science Initiative. For more details please visit those pages.
+
+Additionally, we recognize that a successful project hinges on open, collaborative communication in order to foster trust across our community. We additionally uphold these principles in all aspects of our work:
+
+* Make Everyone Feel Welcome
+* Be Responsive
+* Give More Than You Take

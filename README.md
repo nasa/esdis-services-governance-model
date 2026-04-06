@@ -1,10 +1,10 @@
-> [!CAUTION]
-> This repository is currently under development!
-
 # ESDIS Cloud Data Services Governance Model
 
 This is a documentation site to support development and maintenance of data
 services within the ESDIS Project.
+
+The documentation is published as a GitHub Pages
+[website](https://nasa.github.io/esdis-services-governance-model/).
 
 It is under active development through collaboration of the ESDIS Transformation
 Train.
@@ -41,7 +41,6 @@ CI/CD is configured to publish the rendered documentation to GitHub pages:
   when a PR is merged into the `main` branch.
 
 ## pre-commit
-
 
 This repository uses [pre-commit](https://pre-commit.com/) to enable pre-commit
 checking the repository for some coding standard best practices. These include:

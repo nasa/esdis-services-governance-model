@@ -1,0 +1,23 @@
+---
+title: "Environment Usage"
+---
+
+## System Integration Testing (SIT)
+
+* The primary location for verifying new features and bug fixes as part of the process of completing work captured in Jira tickets.
+* Potentially CI/CD pipelines could be configured to deploy new versions of software to SIT automatically, to allow for quicker testing with less manual intervention required.
+* Other EOSDIS components, such as CMR or EDL,  in SIT will likely experience intermittent issues, as they also test their new features and bug fixes, making SIT a less reliable environment.
+
+## User Acceptance Testing (UAT)
+
+* Production-like environment. UAT ought to be treated as an environment usable by end-users, and stable enough to confidently test production-ready features. Note that while UAT should be a production-like environment, it will not have the same scale or performance expectations, and may not have the same availability.
+* Things deployed to UAT should already be tested in SIT, and should be considered a production release candidate for the next deployment cycle.
+* Once a service is verified in UAT by the service provider and stakeholders, efforts should be made by the service provider to continue the deployment cycle into production, rather than letting UAT get significantly ahead of production.
+* Testing of services that rely on other EOSDIS components should primarily rely on those components as they are in UAT, on the understanding that other development teams deploy code to UAT with a view to imminent release to production. In addition to testing using other EOSDIS components in UAT, spot-checks can be done against those same components as they are in production.
+* An easy rollback mechanism should exist if testing in UAT determines a service version has issues.
+
+## Production
+
+* The environment in which end-users will perform scientific analyses.
+* An easy rollback mechanism should exist if testing determines a service version has issues.
+

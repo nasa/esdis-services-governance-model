@@ -1,0 +1,42 @@
+---
+title: "Communication Best Practices"
+---
+
+## Slack
+
+Primary usage:
+
+* General questions or discussion topics.
+* Informal communication of an issue prior to or after Jira submission (e.g. asking about known issues, reporting failures or errors, or confirming service functionality).
+
+Notes:
+
+* Some teams including Harmony may have dedicated office hours to streamline support outside of slack communication.
+* First consider posting general questions or discussion topics in applicable service channels to ensure broad audience/awareness, as opposed to private slack or email.
+* Slack is not to be used solely for bug or error reporting! Ensure follow-up ticket(s) have been entered in Jira.
+
+## Email
+
+Primary usage:
+
+* Generally more targeted, detailed, less urgent topics.
+* Can also be used for feedback, questions, or feature requests.
+
+## Jira
+
+Primary usage:
+
+* Bug reporting
+* Feature requests
+
+## GitHub
+
+Primary usage:
+
+* Issue submission
+* Pull requests
+* Publication of service versions
+
+Notes:
+
+* Most cloud services teams have no direct connection between their GitHub repos and Jira projects. For those teams, ensure that Issues are manually recreated in Jira.
