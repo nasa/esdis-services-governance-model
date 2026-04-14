@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Contributing – Cloud Data Services Governance Model</title>
+<title>Testing – Cloud Data Services Governance Model</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,41 +23,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -67,7 +32,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./definitions.html" rel="prev">
+<link href="./communication.html" rel="next">
+<link href="./environments.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -118,7 +84,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./contributing.html">Contributing</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./testing.html">Testing</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -214,7 +180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./testing.html" class="sidebar-item-text sidebar-link">
+  <a href="./testing.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Testing</span></a>
   </div>
 </li>
@@ -244,7 +210,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./contributing.html" class="sidebar-item-text sidebar-link active">
+  <a href="./contributing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contributing</span></a>
   </div>
 </li>
@@ -258,13 +224,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#adding-pages" id="toc-adding-pages" class="nav-link active" data-scroll-target="#adding-pages">Adding pages</a></li>
-  <li><a href="#previews" id="toc-previews" class="nav-link" data-scroll-target="#previews">Previews</a></li>
-  <li><a href="#local-development" id="toc-local-development" class="nav-link" data-scroll-target="#local-development">Local Development</a>
-  <ul class="collapse">
-  <li><a href="#install-quarto" id="toc-install-quarto" class="nav-link" data-scroll-target="#install-quarto">Install Quarto</a></li>
-  <li><a href="#run-quarto-commands" id="toc-run-quarto-commands" class="nav-link" data-scroll-target="#run-quarto-commands">Run quarto commands</a></li>
-  </ul></li>
+  <li><a href="#unit-tests" id="toc-unit-tests" class="nav-link active" data-scroll-target="#unit-tests">Unit tests</a></li>
+  <li><a href="#regression-tests" id="toc-regression-tests" class="nav-link" data-scroll-target="#regression-tests">Regression tests</a></li>
+  <li><a href="#service-verification" id="toc-service-verification" class="nav-link" data-scroll-target="#service-verification">Service verification</a></li>
+  <li><a href="#product-verification-ad-hoc" id="toc-product-verification-ad-hoc" class="nav-link" data-scroll-target="#product-verification-ad-hoc">Product verification (ad hoc)</a></li>
+  <li><a href="#product-verification-recurring" id="toc-product-verification-recurring" class="nav-link" data-scroll-target="#product-verification-recurring">Product verification (recurring)</a></li>
   </ul>
 </nav>
     </div>
@@ -273,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Contributing</h1>
+<h1 class="title">Testing</h1>
 </div>
 
 
@@ -290,40 +254,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><strong>We welcome PRs to this repo from anyone. If you open a PR with new or revised content, please add yourself to the authors list in <code>index.qmd</code>.</strong></p>
-<p>This site uses <a href="https://quarto.org/">Quarto</a> to generate website pages using markdown and Jupyter notebooks.</p>
-<section id="adding-pages" class="level2">
-<h2 class="anchored" data-anchor-id="adding-pages">Adding pages</h2>
-<p>To add a new page:</p>
-<ol type="1">
-<li>Create new <code>.qmd</code> or <code>.ipynb</code> file</li>
-<li>Add the new page to the <code>sidebar</code> section in <code>_quarto.yml</code> so it shows up in the sidebar navigation</li>
-</ol>
-</section>
-<section id="previews" class="level2">
-<h2 class="anchored" data-anchor-id="previews">Previews</h2>
-<p>To preview changes, you can run this site locally (see instructions to setup quarto locally below) or use the automated preview generation when opening a PR (see <a href="./.github/workflows/pr-preview.yml">the PR preview workflow</a>).</p>
-</section>
-<section id="local-development" class="level2">
-<h2 class="anchored" data-anchor-id="local-development">Local Development</h2>
-<section id="install-quarto" class="level3">
-<h3 class="anchored" data-anchor-id="install-quarto">Install Quarto</h3>
-<p>Install Quarto by downloading the installer for your platform from <a href="https://quarto.org/docs/get-started/">quarto.org/docs/get-started</a>, or via a package manager:</p>
+<p>A service being maintained under this governance model needs to be well tested. There are several types of test outlined in the workflow scenarios, which include:</p>
 <ul>
-<li><strong>macOS (Homebrew):</strong> <code>brew install --cask quarto</code></li>
-<li><strong>Linux:</strong> Download the <code>.deb</code> or <code>.rpm</code> package from the Quarto website</li>
-<li><strong>Windows:</strong> Download the <code>.msi</code> installer from the Quarto website</li>
+<li>Unit tests</li>
+<li>Regression tests</li>
+<li>Service verification</li>
+<li>Product verification (ad hoc and recurring)</li>
 </ul>
-<p>Verify the installation with <code>quarto check</code>.</p>
+<section id="unit-tests" class="level2">
+<h2 class="anchored" data-anchor-id="unit-tests">Unit tests</h2>
+<p><strong>Owner: Service developer</strong><br> <strong>Examples: <a href="https://docs.pytest.org/en/stable/">pytest</a>, <a href="https://docs.python.org/3/library/unittest.html">unittest</a>, <a href="https://jestjs.io/">Jest</a>, <a href="https://vitest.dev/">Vitest</a></strong></p>
+<p>All services are expected to implement and maintain unit test suites. These test exercise the code of a service at the smallest possible level, typically a function or class.</p>
+<p>Services are expected to exceed a minimum threshold of 80% coverage of service code with their unit test suites, and to automate their execution via CI/CD pipelines such as GitHub workflows. Unit test suites passing should be a blocking step to merging new or updated code into the service.</p>
 </section>
-<section id="run-quarto-commands" class="level3">
-<h3 class="anchored" data-anchor-id="run-quarto-commands">Run quarto commands</h3>
-<p>To preview the site locally:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This runs <code>quarto preview</code>, which serves the site and reloads on changes.</p>
+<section id="regression-tests" class="level2">
+<h2 class="anchored" data-anchor-id="regression-tests">Regression tests</h2>
+<p><strong>Owner: Service developer</strong><br> <strong>Examples: <a href="https://github.com/nasa/harmony-regression-tests">Harmony regression tests</a></strong></p>
+<p>Regression tests for a service should exercise the broad functionality of a service, exercising the main behaviour a user or client software service would experience. This should include failure states. These regression tests <strong>are not</strong> an exhaustive suite of tests against all collections configured for use with a service.</p>
+<p>Failure of the regression tests in different environments are handled differently:</p>
+<ul>
+<li>SIT - debug failure and fail-forward to a new version of the service.</li>
+<li>UAT - rollback version, debug and develop a new service version for future deployment.</li>
+<li>Production - rollback version, debug and develop a new service version for future deployment.</li>
+</ul>
+</section>
+<section id="service-verification" class="level2">
+<h2 class="anchored" data-anchor-id="service-verification">Service verification</h2>
+<p><strong>Owner: Service developer, service product owner</strong></p>
+<p>Verification of a service should occur as part of the regular development cycle of a new feature, via processes such as the Jira workflows for stories and features. These tests are likely executed manually.</p>
+<p>As a new feature, or other service update, is deployed to a new environment, test instructions should be provided to allow for full verification of the new or improved functionality. These test instructions should allow for verification via the mechanisms by which end-users or other software systems interact with the application or service under development. This will likely include programmatic access <em>and</em> access via applicable user interfaces. For example, with a Harmony service, verification should occur via both <code>harmony-py</code> and Earthdata Search.</p>
+<p>Test instructions should be thorough, covering common expected scenarios, such as success and failure, rather than just the happy-path.</p>
+<p>The test plan should be executed in each environment as the new functionality is deployed there, which may require the identification of new data or metadata in production compared to UAT.</p>
+<p>Failure of the test plan in different environments are handled differently:</p>
+<ul>
+<li>SIT - debug failure and fail-forward to a new version of the service.</li>
+<li>UAT - rollback version, debug and develop a new service version for future deployment.</li>
+<li>Production - rollback version, debug and develop a new service version for future deployment.</li>
+</ul>
+</section>
+<section id="product-verification-ad-hoc" class="level2">
+<h2 class="anchored" data-anchor-id="product-verification-ad-hoc">Product verification (ad hoc)</h2>
+<p><strong>Owner: data provider</strong></p>
+<p>Verification that a service correctly processes a specific data product can occur as part of the regular development cycle of a new feature or bug fix relating to that product. This testing is likely more rigorous that that conducted by a service developer, as DAAC staff better know typical end-user behaviour and can replicate typical requests.</p>
+<p>Testing by DAAC staff is strongly encouraged in UAT. However, if no communication is received that issues are encountered by DAACs or other people testing on behalf of the data product, then promotion of a service version from UAT to production will occur approximately 2 weeks after it becomes available in UAT. Communication of successful test results by all stakeholders may accelerate this promotion.</p>
+</section>
+<section id="product-verification-recurring" class="level2">
+<h2 class="anchored" data-anchor-id="product-verification-recurring">Product verification (recurring)</h2>
+<p><strong>Owner: TBD</strong><br> <strong>Example: <a href="https://github.com/nasa/harmony-autotester/">Harmony Autotester</a></strong></p>
+<p>This type of testing inhabits the middle ground of responsibility between comprehensive testing of compatibility between a product and a service, and the functional testing of a service. The aim is to provide a lightweight set of automated tests that can be run across all data products associated with a service. These tests are to be run on a regular cadence to detect large scale incompatibilities.</p>
+<p>Due to the extensive number of tests that may be run (at least one per data product), the tests are necessarily high-level. Typically, they will establish that a very simple request can be issued and complete successfully. The transformed output will not be downloaded or analysed in detail.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -729,11 +710,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./definitions.html" class="pagination-link" aria-label="Definitions">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Definitions</span>
+      <a href="./environments.html" class="pagination-link" aria-label="Environments">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Environments</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./communication.html" class="pagination-link" aria-label="Communication">
+        <span class="nav-page-text">Communication</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

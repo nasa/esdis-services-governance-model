@@ -156,6 +156,66 @@
     ]
   },
   {
+    "objectID": "testing.html",
+    "href": "testing.html",
+    "title": "Testing",
+    "section": "",
+    "text": "A service being maintained under this governance model needs to be well tested. There are several types of test outlined in the workflow scenarios, which include:",
+    "crumbs": [
+      "Testing"
+    ]
+  },
+  {
+    "objectID": "testing.html#unit-tests",
+    "href": "testing.html#unit-tests",
+    "title": "Testing",
+    "section": "Unit tests",
+    "text": "Unit tests\nOwner: Service developer Examples: pytest, unittest, Jest, Vitest\nAll services are expected to implement and maintain unit test suites. These test exercise the code of a service at the smallest possible level, typically a function or class.\nServices are expected to exceed a minimum threshold of 80% coverage of service code with their unit test suites, and to automate their execution via CI/CD pipelines such as GitHub workflows. Unit test suites passing should be a blocking step to merging new or updated code into the service.",
+    "crumbs": [
+      "Testing"
+    ]
+  },
+  {
+    "objectID": "testing.html#regression-tests",
+    "href": "testing.html#regression-tests",
+    "title": "Testing",
+    "section": "Regression tests",
+    "text": "Regression tests\nOwner: Service developer Examples: Harmony regression tests\nRegression tests for a service should exercise the broad functionality of a service, exercising the main behaviour a user or client software service would experience. This should include failure states. These regression tests are not an exhaustive suite of tests against all collections configured for use with a service.\nFailure of the regression tests in different environments are handled differently:\n\nSIT - debug failure and fail-forward to a new version of the service.\nUAT - rollback version, debug and develop a new service version for future deployment.\nProduction - rollback version, debug and develop a new service version for future deployment.",
+    "crumbs": [
+      "Testing"
+    ]
+  },
+  {
+    "objectID": "testing.html#service-verification",
+    "href": "testing.html#service-verification",
+    "title": "Testing",
+    "section": "Service verification",
+    "text": "Service verification\nOwner: Service developer, service product owner\nVerification of a service should occur as part of the regular development cycle of a new feature, via processes such as the Jira workflows for stories and features. These tests are likely executed manually.\nAs a new feature, or other service update, is deployed to a new environment, test instructions should be provided to allow for full verification of the new or improved functionality. These test instructions should allow for verification via the mechanisms by which end-users or other software systems interact with the application or service under development. This will likely include programmatic access and access via applicable user interfaces. For example, with a Harmony service, verification should occur via both harmony-py and Earthdata Search.\nTest instructions should be thorough, covering common expected scenarios, such as success and failure, rather than just the happy-path.\nThe test plan should be executed in each environment as the new functionality is deployed there, which may require the identification of new data or metadata in production compared to UAT.\nFailure of the test plan in different environments are handled differently:\n\nSIT - debug failure and fail-forward to a new version of the service.\nUAT - rollback version, debug and develop a new service version for future deployment.\nProduction - rollback version, debug and develop a new service version for future deployment.",
+    "crumbs": [
+      "Testing"
+    ]
+  },
+  {
+    "objectID": "testing.html#product-verification-ad-hoc",
+    "href": "testing.html#product-verification-ad-hoc",
+    "title": "Testing",
+    "section": "Product verification (ad hoc)",
+    "text": "Product verification (ad hoc)\nOwner: data provider\nVerification that a service correctly processes a specific data product can occur as part of the regular development cycle of a new feature or bug fix relating to that product. This testing is likely more rigorous that that conducted by a service developer, as DAAC staff better know typical end-user behaviour and can replicate typical requests.\nTesting by DAAC staff is strongly encouraged in UAT. However, if no communication is received that issues are encountered by DAACs or other people testing on behalf of the data product, then promotion of a service version from UAT to production will occur approximately 2 weeks after it becomes available in UAT. Communication of successful test results by all stakeholders may accelerate this promotion.",
+    "crumbs": [
+      "Testing"
+    ]
+  },
+  {
+    "objectID": "testing.html#product-verification-recurring",
+    "href": "testing.html#product-verification-recurring",
+    "title": "Testing",
+    "section": "Product verification (recurring)",
+    "text": "Product verification (recurring)\nOwner: TBD Example: Harmony Autotester\nThis type of testing inhabits the middle ground of responsibility between comprehensive testing of compatibility between a product and a service, and the functional testing of a service. The aim is to provide a lightweight set of automated tests that can be run across all data products associated with a service. These tests are to be run on a regular cadence to detect large scale incompatibilities.\nDue to the extensive number of tests that may be run (at least one per data product), the tests are necessarily high-level. Typically, they will establish that a very simple request can be issued and complete successfully. The transformed output will not be downloaded or analysed in detail.",
+    "crumbs": [
+      "Testing"
+    ]
+  },
+  {
     "objectID": "communication.html",
     "href": "communication.html",
     "title": "Communication Best Practices",
