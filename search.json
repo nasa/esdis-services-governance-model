@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Additional Open Source Community Development Guides:\n\nModern Scientific Data Governance Framework\nrOpenSci\nNOAA FIMS Developer Guide\nxarray Contributing Guide\nPangeo Forge Development Guide\nOpenscapes Champions Program presentation on Open Communities",
+    "crumbs": [
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "scenario-product-onboarding.html",
+    "href": "scenario-product-onboarding.html",
+    "title": "Scenario: Data product onboarded to service",
+    "section": "",
+    "text": "The following workflow diagram is adopted from the Harmony dataset onboarding model, in this case more generalized across Earthdata cloud data services and broadened to include DAAC prioritization and SAFe feature development process.\n\nWorkflow\n\n\n\n\n\n\nFigure 1: Dataset service support prioritization and onboarding workflow",
+    "crumbs": [
+      "Ownership Scenarios",
+      "Product Onboarding"
+    ]
+  },
+  {
     "objectID": "contributing.html",
     "href": "contributing.html",
     "title": "Contributing",
@@ -40,13 +61,98 @@
     ]
   },
   {
-    "objectID": "definitions.html",
-    "href": "definitions.html",
-    "title": "Definitions",
+    "objectID": "scenario-bug.html",
+    "href": "scenario-bug.html",
+    "title": "Scenario: Bug is introduced to a service",
     "section": "",
-    "text": "Term\nDefintion\n\n\n\n\nDAAC\nDistributed Active Archive Center\n\n\nEED-3\nEOSDIS Evolution and Development-3\n\n\nEOSDIS\nEarth Observing System Data and Information System\n\n\nESDIS Project\nEarth Science Data and Information System Project\n\n\nESDS\nEarth Science Data System\n\n\nSAFe\nScaled Agile Framework\n\n\nSIT\nSystem Integration Testing\n\n\nTRT\nTransformation Train\n\n\nUAT\nUser Acceptance Testing",
+    "text": "Workflow\n\n\n\n\n\n\nFigure 1: Service bug identification to resolution workflow",
     "crumbs": [
-      "Definitions"
+      "Ownership Scenarios",
+      "Service Bug"
+    ]
+  },
+  {
+    "objectID": "scenario-service-interruption.html",
+    "href": "scenario-service-interruption.html",
+    "title": "Scenario: Service experiences an interruption",
+    "section": "",
+    "text": "An interruption could be either scheduled, for example due to scheduled maintenance or redeployment of an application, or it could be unscheduled, when an unexpected issue arises in either the application or an upstream component. Scheduled interruptions should be kept to a minimum (both in frequency and duration), and our infrastructure should be designed to prevent the need for such interruptions where possible. While the workflow is unique for a scheduled versus unscheduled interruption, there is a similar emphasis on the need for pre and post interruption communication, along with testing and validation.",
+    "crumbs": [
+      "Ownership Scenarios",
+      "Service Interruption"
+    ]
+  },
+  {
+    "objectID": "scenario-service-interruption.html#what-is-an-interruption",
+    "href": "scenario-service-interruption.html#what-is-an-interruption",
+    "title": "Scenario: Service experiences an interruption",
+    "section": "",
+    "text": "An interruption could be either scheduled, for example due to scheduled maintenance or redeployment of an application, or it could be unscheduled, when an unexpected issue arises in either the application or an upstream component. Scheduled interruptions should be kept to a minimum (both in frequency and duration), and our infrastructure should be designed to prevent the need for such interruptions where possible. While the workflow is unique for a scheduled versus unscheduled interruption, there is a similar emphasis on the need for pre and post interruption communication, along with testing and validation.",
+    "crumbs": [
+      "Ownership Scenarios",
+      "Service Interruption"
+    ]
+  },
+  {
+    "objectID": "scenario-service-interruption.html#unscheduled-interruptions",
+    "href": "scenario-service-interruption.html#unscheduled-interruptions",
+    "title": "Scenario: Service experiences an interruption",
+    "section": "Unscheduled interruptions",
+    "text": "Unscheduled interruptions\nWhere possible service development should embrace the basic Agile quality practice of shifting learning left (https://scaledagileframework.com/built-in-quality/). While unexpected interruptions or bugs will occur, their impact can be mitigated by rigorous testing prior to, during and after deployment, along with health checks and metric gathering. The desired outcome is to identify and mitigate unscheduled interruptions as soon as possible, preferably before end-users encounter them.\n\nDiscovering an unscheduled interruption:\nThe following mechanisms for discovery of an unscheduled service interruption are loosely ordered from the earliest point at which an issue arises:\n\nHealth checks in UAT and production environments. (E.g., CloudWatch and/or Cloud Metrics. Potentially also configured to report to the Status Application; see onboarding documentation).\nData provider testing (in UAT and production).\nInternal Slack messages from other EOSDIS teams. Each service should provide clear guidance to these teams to know where they can reach out for help.\nUser reported issue via:\n\nEarthdata Forum\nGitHub issues\nEarthdata support email (support@earthdata.nasa.gov)\n\n\n\n\nWorkflow\n\n\n\n\n\n\nFigure 1: Unscheduled service interruption workflow",
+    "crumbs": [
+      "Ownership Scenarios",
+      "Service Interruption"
+    ]
+  },
+  {
+    "objectID": "environments.html",
+    "href": "environments.html",
+    "title": "Environment Usage",
+    "section": "",
+    "text": "The primary location for verifying new features and bug fixes as part of the process of completing work captured in Jira tickets.\nPotentially CI/CD pipelines could be configured to deploy new versions of software to SIT automatically, to allow for quicker testing with less manual intervention required.\nOther EOSDIS components, such as CMR or EDL, in SIT will likely experience intermittent issues, as they also test their new features and bug fixes, making SIT a less reliable environment.",
+    "crumbs": [
+      "Environments"
+    ]
+  },
+  {
+    "objectID": "environments.html#system-integration-testing-sit",
+    "href": "environments.html#system-integration-testing-sit",
+    "title": "Environment Usage",
+    "section": "",
+    "text": "The primary location for verifying new features and bug fixes as part of the process of completing work captured in Jira tickets.\nPotentially CI/CD pipelines could be configured to deploy new versions of software to SIT automatically, to allow for quicker testing with less manual intervention required.\nOther EOSDIS components, such as CMR or EDL, in SIT will likely experience intermittent issues, as they also test their new features and bug fixes, making SIT a less reliable environment.",
+    "crumbs": [
+      "Environments"
+    ]
+  },
+  {
+    "objectID": "environments.html#user-acceptance-testing-uat",
+    "href": "environments.html#user-acceptance-testing-uat",
+    "title": "Environment Usage",
+    "section": "User Acceptance Testing (UAT)",
+    "text": "User Acceptance Testing (UAT)\n\nProduction-like environment. UAT ought to be treated as an environment usable by end-users, and stable enough to confidently test production-ready features. Note that while UAT should be a production-like environment, it will not have the same scale or performance expectations, and may not have the same availability.\nThings deployed to UAT should already be tested in SIT, and should be considered a production release candidate for the next deployment cycle.\nOnce a service is verified in UAT by the service provider and stakeholders, efforts should be made by the service provider to continue the deployment cycle into production, rather than letting UAT get significantly ahead of production.\nTesting of services that rely on other EOSDIS components should primarily rely on those components as they are in UAT, on the understanding that other development teams deploy code to UAT with a view to imminent release to production. In addition to testing using other EOSDIS components in UAT, spot-checks can be done against those same components as they are in production.\nAn easy rollback mechanism should exist if testing in UAT determines a service version has issues.",
+    "crumbs": [
+      "Environments"
+    ]
+  },
+  {
+    "objectID": "environments.html#production",
+    "href": "environments.html#production",
+    "title": "Environment Usage",
+    "section": "Production",
+    "text": "Production\n\nThe environment in which end-users will perform scientific analyses.\nAn easy rollback mechanism should exist if testing determines a service version has issues.",
+    "crumbs": [
+      "Environments"
+    ]
+  },
+  {
+    "objectID": "scenario-new-feature.html",
+    "href": "scenario-new-feature.html",
+    "title": "Scenario: New feature is developed",
+    "section": "",
+    "text": "The Harmony service development workflow includes unique interactions between the Harmony Core and Harmony backend service development teams (see Figure 2). As such, both a generalized and Harmony-specific feature workflow are illustrated below.\n\nPublishing and releasing a new version of a service:\nData providers and testers at the DAACs need to be able to easily understand the features (tickets) contained in each release of a service. To achieve this:\n\nPlease include commit history in the GitHub release notes. For an example on release note generation, please see this script.\nWhen announcing a release of a published service version to a Harmony environment in the harmony-service-providers Slack channel, please either include the exact release notes from GitHub and/or include a link to the GitHub release page.\nOn each Jira ticket adding, removing or changing a feature in a service, please indicate the service version that those changes are included in via a comment or other mechanism.\n\n\n\nDeployment Cycle:\n\nSIT - should receive all new published artefacts in order to allow service maintainers to test the new version of the service.\nUAT - artefacts will be promoted to UAT on successful SIT testing.\nProduction - artefacts to be promoted to production following successful stakeholder testing in UAT or 2 weeks, whichever is sooner. Exception: failed tests in UAT blocks promotion to production.\n\n\n\nWorkflow:\n\n\n\n\n\n\nFigure 1: General feature development workflow for Earthdata Cloud data services\n\n\n\n\n\n\n\n\n\nFigure 2: Feature development workflow for NASA Harmony",
+    "crumbs": [
+      "Ownership Scenarios",
+      "New Service Feature"
     ]
   },
   {
@@ -100,47 +206,6 @@
     ]
   },
   {
-    "objectID": "scenario-new-feature.html",
-    "href": "scenario-new-feature.html",
-    "title": "Scenario: New feature is developed",
-    "section": "",
-    "text": "The Harmony service development workflow includes unique interactions between the Harmony Core and Harmony backend service development teams (see Figure 2). As such, both a generalized and Harmony-specific feature workflow are illustrated below.\n\nPublishing and releasing a new version of a service:\nData providers and testers at the DAACs need to be able to easily understand the features (tickets) contained in each release of a service. To achieve this:\n\nPlease include commit history in the GitHub release notes. For an example on release note generation, please see this script.\nWhen announcing a release of a published service version to a Harmony environment in the harmony-service-providers Slack channel, please either include the exact release notes from GitHub and/or include a link to the GitHub release page.\nOn each Jira ticket adding, removing or changing a feature in a service, please indicate the service version that those changes are included in via a comment or other mechanism.\n\n\n\nDeployment Cycle:\n\nSIT - should receive all new published artefacts in order to allow service maintainers to test the new version of the service.\nUAT - artefacts will be promoted to UAT on successful SIT testing.\nProduction - artefacts to be promoted to production following successful stakeholder testing in UAT or 2 weeks, whichever is sooner. Exception: failed tests in UAT blocks promotion to production.\n\n\n\nWorkflow:\n\n\n\n\n\n\nFigure 1: General feature development workflow for Earthdata Cloud data services\n\n\n\n\n\n\n\n\n\nFigure 2: Feature development workflow for NASA Harmony",
-    "crumbs": [
-      "Ownership Scenarios",
-      "New Service Feature"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Cloud Data Services Governance Model",
-    "section": "",
-    "text": "This Governance Model provides community development guidance for NASA Earthdata Cloud Data Services with the goals of:\n\nEstablishing roles and responsibilities for contributions to cloud services.\nIdentifying key communication flows, as well as information on documentation, testing, and deployment paradigms.\nOutlining high-level process expectations for contributions.\nProviding example process flows and ownership scenarios for cloud service contributions.\n\nFor the purposes of this document, we define and scope our community to the teams within the NASA DAACs and EED-3 contract supporting the data, services, and applications managed under NASA ESDIS. See our Definitions section for more information.\nOur core values and best practices are modelled from the ESDS Community Development Best Practices Guide, with inspiration from many other successful open source communities (see Resources). Our goals and process guidelines are also inspired by the EOSDIS General Open Source Software Collaboration and Contribution Process guide.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#overview",
-    "href": "index.html#overview",
-    "title": "Cloud Data Services Governance Model",
-    "section": "",
-    "text": "This Governance Model provides community development guidance for NASA Earthdata Cloud Data Services with the goals of:\n\nEstablishing roles and responsibilities for contributions to cloud services.\nIdentifying key communication flows, as well as information on documentation, testing, and deployment paradigms.\nOutlining high-level process expectations for contributions.\nProviding example process flows and ownership scenarios for cloud service contributions.\n\nFor the purposes of this document, we define and scope our community to the teams within the NASA DAACs and EED-3 contract supporting the data, services, and applications managed under NASA ESDIS. See our Definitions section for more information.\nOur core values and best practices are modelled from the ESDS Community Development Best Practices Guide, with inspiration from many other successful open source communities (see Resources). Our goals and process guidelines are also inspired by the EOSDIS General Open Source Software Collaboration and Contribution Process guide.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#values",
-    "href": "index.html#values",
-    "title": "Cloud Data Services Governance Model",
-    "section": "Values",
-    "text": "Values\nThe development community for Earthdata Cloud Services was built around the core principle of “sharing is caring.” The NASA Earthdata Cloud provides us with an opportunity to not only make it easier for scientists to retrieve the data they need, but also to reduce barriers for code reuse and sharing of domain knowledge. We also embrace agility, and accept that it’s okay not knowing all the answers today as long as we work together to identify challenges and develop solutions. We share the same values as the ESDS Community Development Best Practices Guide and NASA’s Open Source Science Initiative. For more details please visit those pages.\nAdditionally, we recognize that a successful project hinges on open, collaborative communication in order to foster trust across our community. We additionally uphold these principles in all aspects of our work:\n\nMake Everyone Feel Welcome\nBe Responsive\nGive More Than You Take",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
     "objectID": "project-structure.html",
     "href": "project-structure.html",
     "title": "Project Structure and Architecture",
@@ -171,122 +236,6 @@
     ]
   },
   {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "Resources",
-    "section": "",
-    "text": "Additional Open Source Community Development Guides:\n\nModern Scientific Data Governance Framework\nrOpenSci\nNOAA FIMS Developer Guide\nxarray Contributing Guide\nPangeo Forge Development Guide\nOpenscapes Champions Program presentation on Open Communities",
-    "crumbs": [
-      "Resources"
-    ]
-  },
-  {
-    "objectID": "scenario-bug.html",
-    "href": "scenario-bug.html",
-    "title": "Scenario: Bug is introduced to a service",
-    "section": "",
-    "text": "Workflow\n\n\n\n\n\n\nFigure 1: Service bug identification to resolution workflow",
-    "crumbs": [
-      "Ownership Scenarios",
-      "Service Bug"
-    ]
-  },
-  {
-    "objectID": "scenario-service-interruption.html",
-    "href": "scenario-service-interruption.html",
-    "title": "Scenario: Service experiences an interruption",
-    "section": "",
-    "text": "An interruption could be either scheduled, for example due to scheduled maintenance or redeployment of an application, or it could be unscheduled, when an unexpected issue arises in either the application or an upstream component. Scheduled interruptions should be kept to a minimum (both in frequency and duration), and our infrastructure should be designed to prevent the need for such interruptions where possible. While the workflow is unique for a scheduled versus unscheduled interruption, there is a similar emphasis on the need for pre and post interruption communication, along with testing and validation.",
-    "crumbs": [
-      "Ownership Scenarios",
-      "Service Interruption"
-    ]
-  },
-  {
-    "objectID": "scenario-service-interruption.html#what-is-an-interruption",
-    "href": "scenario-service-interruption.html#what-is-an-interruption",
-    "title": "Scenario: Service experiences an interruption",
-    "section": "",
-    "text": "An interruption could be either scheduled, for example due to scheduled maintenance or redeployment of an application, or it could be unscheduled, when an unexpected issue arises in either the application or an upstream component. Scheduled interruptions should be kept to a minimum (both in frequency and duration), and our infrastructure should be designed to prevent the need for such interruptions where possible. While the workflow is unique for a scheduled versus unscheduled interruption, there is a similar emphasis on the need for pre and post interruption communication, along with testing and validation.",
-    "crumbs": [
-      "Ownership Scenarios",
-      "Service Interruption"
-    ]
-  },
-  {
-    "objectID": "scenario-service-interruption.html#unscheduled-interruptions",
-    "href": "scenario-service-interruption.html#unscheduled-interruptions",
-    "title": "Scenario: Service experiences an interruption",
-    "section": "Unscheduled interruptions",
-    "text": "Unscheduled interruptions\nWhere possible service development should embrace the basic Agile quality practice of shifting learning left (https://scaledagileframework.com/built-in-quality/). While unexpected interruptions or bugs will occur, their impact can be mitigated by rigorous testing prior to, during and after deployment, along with health checks and metric gathering. The desired outcome is to identify and mitigate unscheduled interruptions as soon as possible, preferably before end-users encounter them.\n\nDiscovering an unscheduled interruption:\nThe following mechanisms for discovery of an unscheduled service interruption are loosely ordered from the earliest point at which an issue arises:\n\nHealth checks in UAT and production environments. (E.g., CloudWatch and/or Cloud Metrics. Potentially also configured to report to the Status Application; see onboarding documentation).\nData provider testing (in UAT and production).\nInternal Slack messages from other EOSDIS teams. Each service should provide clear guidance to these teams to know where they can reach out for help.\nUser reported issue via:\n\nEarthdata Forum\nGitHub issues\nEarthdata support email (support@earthdata.nasa.gov)\n\n\n\n\nWorkflow\n\n\n\n\n\n\nFigure 1: Unscheduled service interruption workflow",
-    "crumbs": [
-      "Ownership Scenarios",
-      "Service Interruption"
-    ]
-  },
-  {
-    "objectID": "scenario-request-failure.html",
-    "href": "scenario-request-failure.html",
-    "title": "Scenario: Service request failure",
-    "section": "",
-    "text": "A service request may fail due to several reasons, including:\n\nA bug is introduced to the service\nA service interruption occurs, impacting the entire service\n\nThis may include an issue with an external component that is impacting the service itself\n\nThe specific service request and data granule combination is not currently supported:\n\nThere could be user error (e.g. attempting a request that is documented to not work)\nThe request combination was not tested prior to configuring in production\nThere is a known issue with the service\n\n\nGenerally, the DAAC data provider team responsible for the given collection(s) is also responsible for monitoring and identifying these failures, or they may also be reported by another team or external user. Initial investigation is then needed to determine the root cause, which is the primary responsibility of the service team.\nRefer to the prior workflow diagrams for bug or interruption causes. In the case of additional support needed for a given service/collection combination, refer to either the dataset onboarding or new feature request workflows. In the case of Harmony which relies on CMR associations between UMM-S, UMM-Var, and UMM-C, it is the responsibility of the DAAC data provider team to manage and ensure removal of any unwanted associations until the issue is resolved.",
-    "crumbs": [
-      "Ownership Scenarios",
-      "Request Failure"
-    ]
-  },
-  {
-    "objectID": "environments.html",
-    "href": "environments.html",
-    "title": "Environment Usage",
-    "section": "",
-    "text": "The primary location for verifying new features and bug fixes as part of the process of completing work captured in Jira tickets.\nPotentially CI/CD pipelines could be configured to deploy new versions of software to SIT automatically, to allow for quicker testing with less manual intervention required.\nOther EOSDIS components, such as CMR or EDL, in SIT will likely experience intermittent issues, as they also test their new features and bug fixes, making SIT a less reliable environment.",
-    "crumbs": [
-      "Environments"
-    ]
-  },
-  {
-    "objectID": "environments.html#system-integration-testing-sit",
-    "href": "environments.html#system-integration-testing-sit",
-    "title": "Environment Usage",
-    "section": "",
-    "text": "The primary location for verifying new features and bug fixes as part of the process of completing work captured in Jira tickets.\nPotentially CI/CD pipelines could be configured to deploy new versions of software to SIT automatically, to allow for quicker testing with less manual intervention required.\nOther EOSDIS components, such as CMR or EDL, in SIT will likely experience intermittent issues, as they also test their new features and bug fixes, making SIT a less reliable environment.",
-    "crumbs": [
-      "Environments"
-    ]
-  },
-  {
-    "objectID": "environments.html#user-acceptance-testing-uat",
-    "href": "environments.html#user-acceptance-testing-uat",
-    "title": "Environment Usage",
-    "section": "User Acceptance Testing (UAT)",
-    "text": "User Acceptance Testing (UAT)\n\nProduction-like environment. UAT ought to be treated as an environment usable by end-users, and stable enough to confidently test production-ready features. Note that while UAT should be a production-like environment, it will not have the same scale or performance expectations, and may not have the same availability.\nThings deployed to UAT should already be tested in SIT, and should be considered a production release candidate for the next deployment cycle.\nOnce a service is verified in UAT by the service provider and stakeholders, efforts should be made by the service provider to continue the deployment cycle into production, rather than letting UAT get significantly ahead of production.\nTesting of services that rely on other EOSDIS components should primarily rely on those components as they are in UAT, on the understanding that other development teams deploy code to UAT with a view to imminent release to production. In addition to testing using other EOSDIS components in UAT, spot-checks can be done against those same components as they are in production.\nAn easy rollback mechanism should exist if testing in UAT determines a service version has issues.",
-    "crumbs": [
-      "Environments"
-    ]
-  },
-  {
-    "objectID": "environments.html#production",
-    "href": "environments.html#production",
-    "title": "Environment Usage",
-    "section": "Production",
-    "text": "Production\n\nThe environment in which end-users will perform scientific analyses.\nAn easy rollback mechanism should exist if testing determines a service version has issues.",
-    "crumbs": [
-      "Environments"
-    ]
-  },
-  {
-    "objectID": "scenario-product-onboarding.html",
-    "href": "scenario-product-onboarding.html",
-    "title": "Scenario: Data product onboarded to service",
-    "section": "",
-    "text": "The following workflow diagram is adopted from the Harmony dataset onboarding model, in this case more generalized across Earthdata cloud data services and broadened to include DAAC prioritization and SAFe feature development process.\n\nWorkflow\n\n\n\n\n\n\nFigure 1: Dataset service support prioritization and onboarding workflow",
-    "crumbs": [
-      "Ownership Scenarios",
-      "Product Onboarding"
-    ]
-  },
-  {
     "objectID": "development.html",
     "href": "development.html",
     "title": "Development and Maintenance",
@@ -294,6 +243,16 @@
     "text": "Maintaining a service includes tasks such as:\n\nSoftware development of features prioritized through the SAFe Transformation Train and the WSJF process.\nBug fixes.\nVulnerability monitoring and remediation.\nUnit test coverage.\nRegression test coverage (per the scope determined in the “Overall Roles and Responsibilities” section).\nDocumentation.",
     "crumbs": [
       "Development"
+    ]
+  },
+  {
+    "objectID": "definitions.html",
+    "href": "definitions.html",
+    "title": "Definitions",
+    "section": "",
+    "text": "Term\nDefintion\n\n\n\n\nDAAC\nDistributed Active Archive Center\n\n\nEED-3\nEOSDIS Evolution and Development-3\n\n\nEOSDIS\nEarth Observing System Data and Information System\n\n\nESDIS Project\nEarth Science Data and Information System Project\n\n\nESDS\nEarth Science Data System\n\n\nSAFe\nScaled Agile Framework\n\n\nSIT\nSystem Integration Testing\n\n\nTRT\nTransformation Train\n\n\nUAT\nUser Acceptance Testing",
+    "crumbs": [
+      "Definitions"
     ]
   },
   {
@@ -344,6 +303,47 @@
     "text": "Dataset Owners\n\nUtilize the Enterprise Priority List to request features and/or contribute to the service code in coordination with the responsible development team.\nMaintain a set of test data and metadata in UAT, which is visible to and usable by all stakeholders, including the following tasks:\n\nCreation of UMM-C record.\nIngest of granule files into the archive.\nCreation of UMM-G records for each granule.\nCreation of UMM-Var records for variables requiring subsetting support, along with association of those UMM-Var records with the UMM-C record.\nConfigure data such that it is visible to service teams (e.g., network/endpoint exceptions, Earthdata Login configuration, and CMR permissions configuration as described here).\nCommunicate test cases requiring specific test data to data/metadata curators, so that they can be ingested.\n\nEnsure the in-progress Definition of Done is followed when onboarding or publishing a new collection to a given service, including metadata curation, tool interoperability, and in-place analysis verification\nIdentify issues upon initial testing of a new collection with a given service. Such issues should be reported to the service team, and be captured as new issue or feature work in Jira, allowing the development to be prioritized by the service team.\nCommunicate end-user feedback, including bugs and feature requests, to the applicable service team(s) to ensure updates are identified and prioritized as needed.",
     "crumbs": [
       "Roles and Responsibilities"
+    ]
+  },
+  {
+    "objectID": "scenario-request-failure.html",
+    "href": "scenario-request-failure.html",
+    "title": "Scenario: Service request failure",
+    "section": "",
+    "text": "A service request may fail due to several reasons, including:\n\nA bug is introduced to the service\nA service interruption occurs, impacting the entire service\n\nThis may include an issue with an external component that is impacting the service itself\n\nThe specific service request and data granule combination is not currently supported:\n\nThere could be user error (e.g. attempting a request that is documented to not work)\nThe request combination was not tested prior to configuring in production\nThere is a known issue with the service\n\n\nGenerally, the DAAC data provider team responsible for the given collection(s) is also responsible for monitoring and identifying these failures, or they may also be reported by another team or external user. Initial investigation is then needed to determine the root cause, which is the primary responsibility of the service team.\nRefer to the prior workflow diagrams for bug or interruption causes. In the case of additional support needed for a given service/collection combination, refer to either the dataset onboarding or new feature request workflows. In the case of Harmony which relies on CMR associations between UMM-S, UMM-Var, and UMM-C, it is the responsibility of the DAAC data provider team to manage and ensure removal of any unwanted associations until the issue is resolved.",
+    "crumbs": [
+      "Ownership Scenarios",
+      "Request Failure"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Cloud Data Services Governance Model",
+    "section": "",
+    "text": "This Governance Model provides community development guidance for NASA Earthdata Cloud Data Services with the goals of:\n\nEstablishing roles and responsibilities for contributions to cloud services.\nIdentifying key communication flows, as well as information on documentation, testing, and deployment paradigms.\nOutlining high-level process expectations for contributions.\nProviding example process flows and ownership scenarios for cloud service contributions.\n\nFor the purposes of this document, we define and scope our community to the teams within the NASA DAACs and EED-3 contract supporting the data, services, and applications managed under NASA ESDIS. See our Definitions section for more information.\nOur core values and best practices are modelled from the ESDS Community Development Best Practices Guide, with inspiration from many other successful open source communities (see Resources). Our goals and process guidelines are also inspired by the EOSDIS General Open Source Software Collaboration and Contribution Process guide.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "Cloud Data Services Governance Model",
+    "section": "",
+    "text": "This Governance Model provides community development guidance for NASA Earthdata Cloud Data Services with the goals of:\n\nEstablishing roles and responsibilities for contributions to cloud services.\nIdentifying key communication flows, as well as information on documentation, testing, and deployment paradigms.\nOutlining high-level process expectations for contributions.\nProviding example process flows and ownership scenarios for cloud service contributions.\n\nFor the purposes of this document, we define and scope our community to the teams within the NASA DAACs and EED-3 contract supporting the data, services, and applications managed under NASA ESDIS. See our Definitions section for more information.\nOur core values and best practices are modelled from the ESDS Community Development Best Practices Guide, with inspiration from many other successful open source communities (see Resources). Our goals and process guidelines are also inspired by the EOSDIS General Open Source Software Collaboration and Contribution Process guide.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#values",
+    "href": "index.html#values",
+    "title": "Cloud Data Services Governance Model",
+    "section": "Values",
+    "text": "Values\nThe development community for Earthdata Cloud Services was built around the core principle of “sharing is caring.” The NASA Earthdata Cloud provides us with an opportunity to not only make it easier for scientists to retrieve the data they need, but also to reduce barriers for code reuse and sharing of domain knowledge. We also embrace agility, and accept that it’s okay not knowing all the answers today as long as we work together to identify challenges and develop solutions. We share the same values as the ESDS Community Development Best Practices Guide and NASA’s Open Source Science Initiative. For more details please visit those pages.\nAdditionally, we recognize that a successful project hinges on open, collaborative communication in order to foster trust across our community. We additionally uphold these principles in all aspects of our work:\n\nMake Everyone Feel Welcome\nBe Responsive\nGive More Than You Take",
+    "crumbs": [
+      "Home"
     ]
   }
 ]
