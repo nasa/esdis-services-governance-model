@@ -4,7 +4,7 @@ title: "Contributing"
 
 **We welcome PRs to this repository from anyone. If you open a PR with new or revised content, please add yourself to the authors list in `index.qmd`.**
 
-The repository can be found [on GitHub](https://github.com/nasa/esdis-services-governance-model>).
+The repository can be found [on GitHub](https://github.com/nasa/esdis-services-governance-model).
 
 # Quarto
 
