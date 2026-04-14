@@ -30,6 +30,8 @@ website:
             text: Service Interruption
       - href: environments.qmd
         text: Environments
+      - href: testing.qmd
+        text: Testing
       - href: communication.qmd
         text: Communication
       - href: development.qmd
