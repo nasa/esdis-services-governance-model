@@ -25,7 +25,7 @@
     "href": "contributing.html",
     "title": "Contributing",
     "section": "",
-    "text": "We welcome PRs to this repo from anyone. If you open a PR with new or revised content, please add yourself to the authors list in index.qmd.\nThis site uses Quarto to generate website pages using markdown and Jupyter notebooks.",
+    "text": "We welcome PRs to this repository from anyone. If you open a PR with new or revised content, please add yourself to the authors list in index.qmd.\nThe repository can be found on GitHub.",
     "crumbs": [
       "Contributing"
     ]
