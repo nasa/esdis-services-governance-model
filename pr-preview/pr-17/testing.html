@@ -263,15 +263,13 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <section id="unit-tests" class="level2">
 <h2 class="anchored" data-anchor-id="unit-tests">Unit tests</h2>
-<p><strong>Owner: Service curator</strong><br>
-<strong>Examples: <a href="https://docs.pytest.org/en/stable/">pytest</a>, <a href="https://docs.python.org/3/library/unittest.html">unittest</a>, <a href="https://jestjs.io/">Jest</a>, <a href="https://vitest.dev/">Vitest</a></strong></p>
+<p><strong>Owner: Service curator</strong><br> <strong>Examples: <a href="https://docs.pytest.org/en/stable/">pytest</a>, <a href="https://docs.python.org/3/library/unittest.html">unittest</a>, <a href="https://jestjs.io/">Jest</a>, <a href="https://vitest.dev/">Vitest</a></strong></p>
 <p>All services are expected to implement and maintain unit test suites. These test exercise the code of a service at the smallest possible level, typically a function or class.</p>
 <p>Services are expected to exceed a minimum threshold of 80% coverage of service code with their unit test suites, and to automate their execution via CI/CD pipelines such as GitHub workflows. Unit test suites passing should be a blocking step to merging new or updated code into the service.</p>
 </section>
 <section id="regression-tests" class="level2">
 <h2 class="anchored" data-anchor-id="regression-tests">Regression tests</h2>
-<p><strong>Owner: Service curator</strong><br>
-<strong>Examples: <a href="https://github.com/nasa/harmony-regression-tests">Harmony regression tests</a></strong></p>
+<p><strong>Owner: Service curator</strong><br> <strong>Examples: <a href="https://github.com/nasa/harmony-regression-tests">Harmony regression tests</a></strong></p>
 <p>Regression tests for a service should exercise the broad functionality of a service, exercising the main behavior a user or client software service would experience. This should include failure states. These regression tests <strong>are not</strong> an exhaustive suite of tests against all collections configured for use with a service.</p>
 <p>Failure of the regression tests in different environments are handled differently:</p>
 <ul>
@@ -302,8 +300,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="product-verification-recurring" class="level2">
 <h2 class="anchored" data-anchor-id="product-verification-recurring">Product verification (recurring)</h2>
-<p><strong>Owner: TBD</strong><br>
-<strong>Example: <a href="https://github.com/nasa/harmony-autotester/">Harmony Autotester</a></strong></p>
+<p><strong>Owner: TBD</strong><br> <strong>Example: <a href="https://github.com/nasa/harmony-autotester/">Harmony Autotester</a></strong></p>
 <p>This type of testing inhabits the middle ground of responsibility between comprehensive testing of compatibility between a product and a service, and the functional testing of a service. The aim is to provide a lightweight set of automated tests that can be run across all data products associated with a service. These tests are to be run on a regular cadence to detect large scale incompatibilities.</p>
 <p>Due to the extensive number of tests that may be run (at least one per data product), the tests are necessarily high-level. Typically, they will establish that a very simple request can be issued and complete successfully. The transformed output will not be downloaded or analyzed in detail.</p>
 

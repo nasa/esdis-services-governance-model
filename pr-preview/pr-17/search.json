@@ -116,7 +116,7 @@
     "href": "testing.html#unit-tests",
     "title": "Testing",
     "section": "Unit tests",
-    "text": "Unit tests\nOwner: Service curator\nExamples: pytest, unittest, Jest, Vitest\nAll services are expected to implement and maintain unit test suites. These test exercise the code of a service at the smallest possible level, typically a function or class.\nServices are expected to exceed a minimum threshold of 80% coverage of service code with their unit test suites, and to automate their execution via CI/CD pipelines such as GitHub workflows. Unit test suites passing should be a blocking step to merging new or updated code into the service.",
+    "text": "Unit tests\nOwner: Service curator Examples: pytest, unittest, Jest, Vitest\nAll services are expected to implement and maintain unit test suites. These test exercise the code of a service at the smallest possible level, typically a function or class.\nServices are expected to exceed a minimum threshold of 80% coverage of service code with their unit test suites, and to automate their execution via CI/CD pipelines such as GitHub workflows. Unit test suites passing should be a blocking step to merging new or updated code into the service.",
     "crumbs": [
       "Testing"
     ]
@@ -126,7 +126,7 @@
     "href": "testing.html#regression-tests",
     "title": "Testing",
     "section": "Regression tests",
-    "text": "Regression tests\nOwner: Service curator\nExamples: Harmony regression tests\nRegression tests for a service should exercise the broad functionality of a service, exercising the main behavior a user or client software service would experience. This should include failure states. These regression tests are not an exhaustive suite of tests against all collections configured for use with a service.\nFailure of the regression tests in different environments are handled differently:\n\nSIT - debug failure and fail-forward to a new version of the service.\nUAT - rollback version, debug and develop a new service version for future deployment.\nProduction - rollback version, debug and develop a new service version for future deployment.",
+    "text": "Regression tests\nOwner: Service curator Examples: Harmony regression tests\nRegression tests for a service should exercise the broad functionality of a service, exercising the main behavior a user or client software service would experience. This should include failure states. These regression tests are not an exhaustive suite of tests against all collections configured for use with a service.\nFailure of the regression tests in different environments are handled differently:\n\nSIT - debug failure and fail-forward to a new version of the service.\nUAT - rollback version, debug and develop a new service version for future deployment.\nProduction - rollback version, debug and develop a new service version for future deployment.",
     "crumbs": [
       "Testing"
     ]
@@ -156,7 +156,7 @@
     "href": "testing.html#product-verification-recurring",
     "title": "Testing",
     "section": "Product verification (recurring)",
-    "text": "Product verification (recurring)\nOwner: TBD\nExample: Harmony Autotester\nThis type of testing inhabits the middle ground of responsibility between comprehensive testing of compatibility between a product and a service, and the functional testing of a service. The aim is to provide a lightweight set of automated tests that can be run across all data products associated with a service. These tests are to be run on a regular cadence to detect large scale incompatibilities.\nDue to the extensive number of tests that may be run (at least one per data product), the tests are necessarily high-level. Typically, they will establish that a very simple request can be issued and complete successfully. The transformed output will not be downloaded or analyzed in detail.",
+    "text": "Product verification (recurring)\nOwner: TBD Example: Harmony Autotester\nThis type of testing inhabits the middle ground of responsibility between comprehensive testing of compatibility between a product and a service, and the functional testing of a service. The aim is to provide a lightweight set of automated tests that can be run across all data products associated with a service. These tests are to be run on a regular cadence to detect large scale incompatibilities.\nDue to the extensive number of tests that may be run (at least one per data product), the tests are necessarily high-level. Typically, they will establish that a very simple request can be issued and complete successfully. The transformed output will not be downloaded or analyzed in detail.",
     "crumbs": [
       "Testing"
     ]
