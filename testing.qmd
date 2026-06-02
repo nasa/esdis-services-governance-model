@@ -11,7 +11,7 @@ A service being maintained under this governance model needs to be well tested. 
 
 ## Unit tests
 
-**Owner: Service curator**  
+**Owner: Service curator**<br>
 **Examples: [pytest](https://docs.pytest.org/en/stable/), [unittest](https://docs.python.org/3/library/unittest.html), [Jest](https://jestjs.io/), [Vitest](https://vitest.dev/)**
 
 All services are expected to implement and maintain unit test suites. These test exercise the code of a service at the smallest possible level, typically a function or class.
@@ -20,7 +20,7 @@ Services are expected to exceed a minimum threshold of 80% coverage of service c
 
 ## Regression tests
 
-**Owner: Service curator**  
+**Owner: Service curator**<br>
 **Examples: [Harmony regression tests](https://github.com/nasa/harmony-regression-tests)**
 
 Regression tests for a service should exercise the broad functionality of a service, exercising the main behavior a user or client software service would experience. This should include failure states. These regression tests **are not** an exhaustive suite of tests against all collections configured for use with a service.
@@ -59,7 +59,7 @@ Testing by data provider is strongly encouraged in UAT. However, if no communica
 
 ## Product verification (recurring)
 
-**Owner: TBD**  
+**Owner: TBD**<br>
 **Example: [Harmony Autotester](https://github.com/nasa/harmony-autotester/)**
 
 This type of testing inhabits the middle ground of responsibility between comprehensive testing of compatibility between a product and a service, and the functional testing of a service. The aim is to provide a lightweight set of automated tests that can be run across all data products associated with a service. These tests are to be run on a regular cadence to detect large scale incompatibilities.
