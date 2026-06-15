@@ -1,93 +1,52 @@
 [
   {
-    "objectID": "scenario-request-failure.html",
-    "href": "scenario-request-failure.html",
-    "title": "Scenario: Service request failure",
+    "objectID": "communication.html",
+    "href": "communication.html",
+    "title": "Communication Best Practices",
     "section": "",
-    "text": "A service request may fail due to several reasons, including:\n\nA bug is introduced to the service\nA service interruption occurs, impacting the entire service\n\nThis may include an issue with an external component that is impacting the service itself\n\nThe specific service request and data granule combination is not currently supported:\n\nThere could be user error (e.g. attempting a request that is documented to not work)\nThe request combination was not tested prior to configuring in production\nThere is a known issue with the service\n\n\nGenerally, the DAAC data provider team responsible for the given collection(s) is also responsible for monitoring and identifying these failures, or they may also be reported by another team or external user. Initial investigation is then needed to determine the root cause, which is the primary responsibility of the service team.\nRefer to the prior workflow diagrams for bug or interruption causes. In the case of additional support needed for a given service/collection combination, refer to either the dataset onboarding or new feature request workflows. In the case of Harmony which relies on CMR associations between UMM-S, UMM-Var, and UMM-C, it is the responsibility of the DAAC data provider team to manage and ensure removal of any unwanted associations until the issue is resolved.",
+    "text": "Primary usage:\n\nGeneral questions or discussion topics.\nInformal communication of an issue prior to or after Jira submission (e.g. asking about known issues, reporting failures or errors, or confirming service functionality).\n\nNotes:\n\nSome teams including Harmony may have dedicated office hours to streamline support outside of slack communication.\nFirst consider posting general questions or discussion topics in applicable service channels to ensure broad audience/awareness, as opposed to private slack or email.\nSlack is not to be used solely for bug or error reporting! Ensure follow-up ticket(s) have been entered in Jira.",
     "crumbs": [
-      "Ownership Scenarios",
-      "Request Failure"
+      "Communication"
     ]
   },
   {
-    "objectID": "definitions.html",
-    "href": "definitions.html",
-    "title": "Definitions",
+    "objectID": "communication.html#slack",
+    "href": "communication.html#slack",
+    "title": "Communication Best Practices",
     "section": "",
-    "text": "Term\nDefintion\n\n\n\n\nDAAC\nDistributed Active Archive Center\n\n\nEED-3\nEOSDIS Evolution and Development-3\n\n\nEOSDIS\nEarth Observing System Data and Information System\n\n\nESDIS Project\nEarth Science Data and Information System Project\n\n\nESDS\nEarth Science Data System\n\n\nSAFe\nScaled Agile Framework\n\n\nSIT\nSystem Integration Testing\n\n\nTRT\nTransformation Train\n\n\nUAT\nUser Acceptance Testing",
+    "text": "Primary usage:\n\nGeneral questions or discussion topics.\nInformal communication of an issue prior to or after Jira submission (e.g. asking about known issues, reporting failures or errors, or confirming service functionality).\n\nNotes:\n\nSome teams including Harmony may have dedicated office hours to streamline support outside of slack communication.\nFirst consider posting general questions or discussion topics in applicable service channels to ensure broad audience/awareness, as opposed to private slack or email.\nSlack is not to be used solely for bug or error reporting! Ensure follow-up ticket(s) have been entered in Jira.",
     "crumbs": [
-      "Definitions"
+      "Communication"
     ]
   },
   {
-    "objectID": "contributing.html",
-    "href": "contributing.html",
-    "title": "Contributing",
-    "section": "",
-    "text": "We welcome PRs to this repository from anyone. If you open a PR with new or revised content, please add yourself to the authors list in index.qmd.\nThe repository can be found on GitHub.",
+    "objectID": "communication.html#email",
+    "href": "communication.html#email",
+    "title": "Communication Best Practices",
+    "section": "Email",
+    "text": "Email\nPrimary usage:\n\nGenerally more targeted, detailed, less urgent topics.\nCan also be used for feedback, questions, or feature requests.",
     "crumbs": [
-      "Contributing"
+      "Communication"
     ]
   },
   {
-    "objectID": "contributing.html#adding-pages",
-    "href": "contributing.html#adding-pages",
-    "title": "Contributing",
-    "section": "Adding pages",
-    "text": "Adding pages\nTo add a new page:\n\nCreate new .qmd or .ipynb file\nAdd the new page to the sidebar section in _quarto.yml so it shows up in the sidebar navigation",
+    "objectID": "communication.html#jira",
+    "href": "communication.html#jira",
+    "title": "Communication Best Practices",
+    "section": "Jira",
+    "text": "Jira\nPrimary usage:\n\nBug reporting\nFeature requests",
     "crumbs": [
-      "Contributing"
+      "Communication"
     ]
   },
   {
-    "objectID": "contributing.html#previews",
-    "href": "contributing.html#previews",
-    "title": "Contributing",
-    "section": "Previews",
-    "text": "Previews\nTo preview changes, you can run this site locally (see instructions to setup quarto locally below) or use the automated preview generation when opening a PR (see the PR preview workflow).",
+    "objectID": "communication.html#github",
+    "href": "communication.html#github",
+    "title": "Communication Best Practices",
+    "section": "GitHub",
+    "text": "GitHub\nPrimary usage:\n\nIssue submission\nPull requests\nPublication of service versions\n\nNotes:\n\nMost cloud services teams have no direct connection between their GitHub repos and Jira projects. For those teams, ensure that Issues are manually recreated in Jira.",
     "crumbs": [
-      "Contributing"
-    ]
-  },
-  {
-    "objectID": "contributing.html#local-development",
-    "href": "contributing.html#local-development",
-    "title": "Contributing",
-    "section": "Local Development",
-    "text": "Local Development\n\nInstall Quarto\nInstall Quarto by downloading the installer for your platform from quarto.org/docs/get-started, or via a package manager:\n\nmacOS (Homebrew): brew install --cask quarto\nLinux: Download the .deb or .rpm package from the Quarto website\nWindows: Download the .msi installer from the Quarto website\n\nVerify the installation with quarto check.\n\n\nRun quarto commands\nTo preview the site locally:\nquarto preview\nThis runs quarto preview, which serves the site and reloads on changes.",
-    "crumbs": [
-      "Contributing"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Cloud Data Services Governance Model",
-    "section": "",
-    "text": "This Governance Model provides community development guidance for NASA Earthdata Cloud Data Services with the goals of:\n\nEstablishing roles and responsibilities for contributions to cloud services.\nIdentifying key communication flows, as well as information on documentation, testing, and deployment paradigms.\nOutlining high-level process expectations for contributions.\nProviding example process flows and ownership scenarios for cloud service contributions.\n\nFor the purposes of this document, we define and scope our community to the teams within the NASA DAACs and EED-3 contract supporting the data, services, and applications managed under NASA ESDIS. See our Definitions section for more information.\nOur core values and best practices are modelled from the ESDS Community Development Best Practices Guide, with inspiration from many other successful open source communities (see Resources). Our goals and process guidelines are also inspired by the EOSDIS General Open Source Software Collaboration and Contribution Process guide.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#overview",
-    "href": "index.html#overview",
-    "title": "Cloud Data Services Governance Model",
-    "section": "",
-    "text": "This Governance Model provides community development guidance for NASA Earthdata Cloud Data Services with the goals of:\n\nEstablishing roles and responsibilities for contributions to cloud services.\nIdentifying key communication flows, as well as information on documentation, testing, and deployment paradigms.\nOutlining high-level process expectations for contributions.\nProviding example process flows and ownership scenarios for cloud service contributions.\n\nFor the purposes of this document, we define and scope our community to the teams within the NASA DAACs and EED-3 contract supporting the data, services, and applications managed under NASA ESDIS. See our Definitions section for more information.\nOur core values and best practices are modelled from the ESDS Community Development Best Practices Guide, with inspiration from many other successful open source communities (see Resources). Our goals and process guidelines are also inspired by the EOSDIS General Open Source Software Collaboration and Contribution Process guide.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#values",
-    "href": "index.html#values",
-    "title": "Cloud Data Services Governance Model",
-    "section": "Values",
-    "text": "Values\nThe development community for Earthdata Cloud Services was built around the core principle of “sharing is caring.” The NASA Earthdata Cloud provides us with an opportunity to not only make it easier for scientists to retrieve the data they need, but also to reduce barriers for code reuse and sharing of domain knowledge. We also embrace agility, and accept that it’s okay not knowing all the answers today as long as we work together to identify challenges and develop solutions. We share the same values as the ESDS Community Development Best Practices Guide and NASA’s Open Source Science Initiative. For more details please visit those pages.\nAdditionally, we recognize that a successful project hinges on open, collaborative communication in order to foster trust across our community. We additionally uphold these principles in all aspects of our work:\n\nMake Everyone Feel Welcome\nBe Responsive\nGive More Than You Take",
-    "crumbs": [
-      "Home"
+      "Communication"
     ]
   },
   {
@@ -172,6 +131,17 @@
     ]
   },
   {
+    "objectID": "scenario-product-onboarding.html",
+    "href": "scenario-product-onboarding.html",
+    "title": "Scenario: Data product onboarded to service",
+    "section": "",
+    "text": "The following workflow diagram is adopted from the Harmony dataset onboarding model, in this case more generalized across Earthdata cloud data services and broadened to include DAAC prioritization and SAFe feature development process.\n\nWorkflow\n\n\n\n\n\n\nFigure 1: Dataset service support prioritization and onboarding workflow",
+    "crumbs": [
+      "Ownership Scenarios",
+      "Product Onboarding"
+    ]
+  },
+  {
     "objectID": "roles-and-responsibilities.html",
     "href": "roles-and-responsibilities.html",
     "title": "Roles and Responsibilities",
@@ -222,137 +192,14 @@
     ]
   },
   {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "Resources",
+    "objectID": "scenario-request-failure.html",
+    "href": "scenario-request-failure.html",
+    "title": "Scenario: Service request failure",
     "section": "",
-    "text": "Additional Open Source Community Development Guides:\n\nModern Scientific Data Governance Framework\nrOpenSci\nNOAA FIMS Developer Guide\nxarray Contributing Guide\nPangeo Forge Development Guide\nOpenscapes Champions Program presentation on Open Communities",
-    "crumbs": [
-      "Resources"
-    ]
-  },
-  {
-    "objectID": "project-structure.html",
-    "href": "project-structure.html",
-    "title": "Project Structure and Architecture",
-    "section": "",
-    "text": "Figure 1: Project Structure adapted from EOSDIS General Open Source Software Collaboration and Contribution Process: This diagram lays out the relationships between the various roles across our cloud data services community, showing how each role interacts at a high level.",
-    "crumbs": [
-      "Project Structure"
-    ]
-  },
-  {
-    "objectID": "project-structure.html#organizational-model",
-    "href": "project-structure.html#organizational-model",
-    "title": "Project Structure and Architecture",
-    "section": "",
-    "text": "Figure 1: Project Structure adapted from EOSDIS General Open Source Software Collaboration and Contribution Process: This diagram lays out the relationships between the various roles across our cloud data services community, showing how each role interacts at a high level.",
-    "crumbs": [
-      "Project Structure"
-    ]
-  },
-  {
-    "objectID": "project-structure.html#cloud-data-services-landscape",
-    "href": "project-structure.html#cloud-data-services-landscape",
-    "title": "Project Structure and Architecture",
-    "section": "Cloud Data Services Landscape",
-    "text": "Cloud Data Services Landscape\n\n\n\n\n\n\nFigure 2: Earthdata Cloud services architecture across programmatic services, clients, and user interfaces. Dashed lines are used to distinguish the crossing over another solid line. Earthdata Login is not indicated here for simplicity. Note: This is incomplete as of 18 March 2024 and will continue to be refined in future iterations.",
-    "crumbs": [
-      "Project Structure"
-    ]
-  },
-  {
-    "objectID": "scenario-service-interruption.html",
-    "href": "scenario-service-interruption.html",
-    "title": "Scenario: Service experiences an interruption",
-    "section": "",
-    "text": "An interruption could be either scheduled, for example due to scheduled maintenance or redeployment of an application, or it could be unscheduled, when an unexpected issue arises in either the application or an upstream component. Scheduled interruptions should be kept to a minimum (both in frequency and duration), and our infrastructure should be designed to prevent the need for such interruptions where possible. While the workflow is unique for a scheduled versus unscheduled interruption, there is a similar emphasis on the need for pre and post interruption communication, along with testing and validation.",
+    "text": "A service request may fail due to several reasons, including:\n\nA bug is introduced to the service\nA service interruption occurs, impacting the entire service\n\nThis may include an issue with an external component that is impacting the service itself\n\nThe specific service request and data granule combination is not currently supported:\n\nThere could be user error (e.g. attempting a request that is documented to not work)\nThe request combination was not tested prior to configuring in production\nThere is a known issue with the service\n\n\nGenerally, the DAAC data provider team responsible for the given collection(s) is also responsible for monitoring and identifying these failures, or they may also be reported by another team or external user. Initial investigation is then needed to determine the root cause, which is the primary responsibility of the service team.\nRefer to the prior workflow diagrams for bug or interruption causes. In the case of additional support needed for a given service/collection combination, refer to either the dataset onboarding or new feature request workflows. In the case of Harmony which relies on CMR associations between UMM-S, UMM-Var, and UMM-C, it is the responsibility of the DAAC data provider team to manage and ensure removal of any unwanted associations until the issue is resolved.",
     "crumbs": [
       "Ownership Scenarios",
-      "Service Interruption"
-    ]
-  },
-  {
-    "objectID": "scenario-service-interruption.html#what-is-an-interruption",
-    "href": "scenario-service-interruption.html#what-is-an-interruption",
-    "title": "Scenario: Service experiences an interruption",
-    "section": "",
-    "text": "An interruption could be either scheduled, for example due to scheduled maintenance or redeployment of an application, or it could be unscheduled, when an unexpected issue arises in either the application or an upstream component. Scheduled interruptions should be kept to a minimum (both in frequency and duration), and our infrastructure should be designed to prevent the need for such interruptions where possible. While the workflow is unique for a scheduled versus unscheduled interruption, there is a similar emphasis on the need for pre and post interruption communication, along with testing and validation.",
-    "crumbs": [
-      "Ownership Scenarios",
-      "Service Interruption"
-    ]
-  },
-  {
-    "objectID": "scenario-service-interruption.html#unscheduled-interruptions",
-    "href": "scenario-service-interruption.html#unscheduled-interruptions",
-    "title": "Scenario: Service experiences an interruption",
-    "section": "Unscheduled interruptions",
-    "text": "Unscheduled interruptions\nWhere possible service development should embrace the basic Agile quality practice of shifting learning left (https://scaledagileframework.com/built-in-quality/). While unexpected interruptions or bugs will occur, their impact can be mitigated by rigorous testing prior to, during and after deployment, along with health checks and metric gathering. The desired outcome is to identify and mitigate unscheduled interruptions as soon as possible, preferably before end-users encounter them.\n\nDiscovering an unscheduled interruption:\nThe following mechanisms for discovery of an unscheduled service interruption are loosely ordered from the earliest point at which an issue arises:\n\nHealth checks in UAT and production environments. (E.g., CloudWatch and/or Cloud Metrics. Potentially also configured to report to the Status Application; see onboarding documentation).\nData provider testing (in UAT and production).\nInternal Slack messages from other EOSDIS teams. Each service should provide clear guidance to these teams to know where they can reach out for help.\nUser reported issue via:\n\nEarthdata Forum\nGitHub issues\nEarthdata support email (support@earthdata.nasa.gov)\n\n\n\n\nWorkflow\n\n\n\n\n\n\nFigure 1: Unscheduled service interruption workflow",
-    "crumbs": [
-      "Ownership Scenarios",
-      "Service Interruption"
-    ]
-  },
-  {
-    "objectID": "communication.html",
-    "href": "communication.html",
-    "title": "Communication Best Practices",
-    "section": "",
-    "text": "Primary usage:\n\nGeneral questions or discussion topics.\nInformal communication of an issue prior to or after Jira submission (e.g. asking about known issues, reporting failures or errors, or confirming service functionality).\n\nNotes:\n\nSome teams including Harmony may have dedicated office hours to streamline support outside of slack communication.\nFirst consider posting general questions or discussion topics in applicable service channels to ensure broad audience/awareness, as opposed to private slack or email.\nSlack is not to be used solely for bug or error reporting! Ensure follow-up ticket(s) have been entered in Jira.",
-    "crumbs": [
-      "Communication"
-    ]
-  },
-  {
-    "objectID": "communication.html#slack",
-    "href": "communication.html#slack",
-    "title": "Communication Best Practices",
-    "section": "",
-    "text": "Primary usage:\n\nGeneral questions or discussion topics.\nInformal communication of an issue prior to or after Jira submission (e.g. asking about known issues, reporting failures or errors, or confirming service functionality).\n\nNotes:\n\nSome teams including Harmony may have dedicated office hours to streamline support outside of slack communication.\nFirst consider posting general questions or discussion topics in applicable service channels to ensure broad audience/awareness, as opposed to private slack or email.\nSlack is not to be used solely for bug or error reporting! Ensure follow-up ticket(s) have been entered in Jira.",
-    "crumbs": [
-      "Communication"
-    ]
-  },
-  {
-    "objectID": "communication.html#email",
-    "href": "communication.html#email",
-    "title": "Communication Best Practices",
-    "section": "Email",
-    "text": "Email\nPrimary usage:\n\nGenerally more targeted, detailed, less urgent topics.\nCan also be used for feedback, questions, or feature requests.",
-    "crumbs": [
-      "Communication"
-    ]
-  },
-  {
-    "objectID": "communication.html#jira",
-    "href": "communication.html#jira",
-    "title": "Communication Best Practices",
-    "section": "Jira",
-    "text": "Jira\nPrimary usage:\n\nBug reporting\nFeature requests",
-    "crumbs": [
-      "Communication"
-    ]
-  },
-  {
-    "objectID": "communication.html#github",
-    "href": "communication.html#github",
-    "title": "Communication Best Practices",
-    "section": "GitHub",
-    "text": "GitHub\nPrimary usage:\n\nIssue submission\nPull requests\nPublication of service versions\n\nNotes:\n\nMost cloud services teams have no direct connection between their GitHub repos and Jira projects. For those teams, ensure that Issues are manually recreated in Jira.",
-    "crumbs": [
-      "Communication"
-    ]
-  },
-  {
-    "objectID": "scenario-product-onboarding.html",
-    "href": "scenario-product-onboarding.html",
-    "title": "Scenario: Data product onboarded to service",
-    "section": "",
-    "text": "The following workflow diagram is adopted from the Harmony dataset onboarding model, in this case more generalized across Earthdata cloud data services and broadened to include DAAC prioritization and SAFe feature development process.\n\nWorkflow\n\n\n\n\n\n\nFigure 1: Dataset service support prioritization and onboarding workflow",
-    "crumbs": [
-      "Ownership Scenarios",
-      "Product Onboarding"
+      "Request Failure"
     ]
   },
   {
@@ -404,6 +251,159 @@
     "crumbs": [
       "Ownership Scenarios",
       "Service Bug"
+    ]
+  },
+  {
+    "objectID": "contributing.html",
+    "href": "contributing.html",
+    "title": "Contributing",
+    "section": "",
+    "text": "We welcome PRs to this repository from anyone. If you open a PR with new or revised content, please add yourself to the authors list in index.qmd.\nThe repository can be found on GitHub.",
+    "crumbs": [
+      "Contributing"
+    ]
+  },
+  {
+    "objectID": "contributing.html#adding-pages",
+    "href": "contributing.html#adding-pages",
+    "title": "Contributing",
+    "section": "Adding pages",
+    "text": "Adding pages\nTo add a new page:\n\nCreate new .qmd or .ipynb file\nAdd the new page to the sidebar section in _quarto.yml so it shows up in the sidebar navigation",
+    "crumbs": [
+      "Contributing"
+    ]
+  },
+  {
+    "objectID": "contributing.html#previews",
+    "href": "contributing.html#previews",
+    "title": "Contributing",
+    "section": "Previews",
+    "text": "Previews\nTo preview changes, you can run this site locally (see instructions to setup quarto locally below) or use the automated preview generation when opening a PR (see the PR preview workflow).",
+    "crumbs": [
+      "Contributing"
+    ]
+  },
+  {
+    "objectID": "contributing.html#local-development",
+    "href": "contributing.html#local-development",
+    "title": "Contributing",
+    "section": "Local Development",
+    "text": "Local Development\n\nInstall Quarto\nInstall Quarto by downloading the installer for your platform from quarto.org/docs/get-started, or via a package manager:\n\nmacOS (Homebrew): brew install --cask quarto\nLinux: Download the .deb or .rpm package from the Quarto website\nWindows: Download the .msi installer from the Quarto website\n\nVerify the installation with quarto check.\n\n\nRun quarto commands\nTo preview the site locally:\nquarto preview\nThis runs quarto preview, which serves the site and reloads on changes.",
+    "crumbs": [
+      "Contributing"
+    ]
+  },
+  {
+    "objectID": "definitions.html",
+    "href": "definitions.html",
+    "title": "Definitions",
+    "section": "",
+    "text": "Term\nDefintion\n\n\n\n\nDAAC\nDistributed Active Archive Center\n\n\nEED-3\nEOSDIS Evolution and Development-3\n\n\nEOSDIS\nEarth Observing System Data and Information System\n\n\nESDIS Project\nEarth Science Data and Information System Project\n\n\nESDS\nEarth Science Data System\n\n\nSAFe\nScaled Agile Framework\n\n\nSIT\nSystem Integration Testing\n\n\nTRT\nTransformation Train\n\n\nUAT\nUser Acceptance Testing",
+    "crumbs": [
+      "Definitions"
+    ]
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Additional Open Source Community Development Guides:\n\nModern Scientific Data Governance Framework\nrOpenSci\nNOAA FIMS Developer Guide\nxarray Contributing Guide\nPangeo Forge Development Guide\nOpenscapes Champions Program presentation on Open Communities",
+    "crumbs": [
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "scenario-service-interruption.html",
+    "href": "scenario-service-interruption.html",
+    "title": "Scenario: Service experiences an interruption",
+    "section": "",
+    "text": "An interruption could be either scheduled, for example due to scheduled maintenance or redeployment of an application, or it could be unscheduled, when an unexpected issue arises in either the application or an upstream component. Scheduled interruptions should be kept to a minimum (both in frequency and duration), and our infrastructure should be designed to prevent the need for such interruptions where possible. While the workflow is unique for a scheduled versus unscheduled interruption, there is a similar emphasis on the need for pre and post interruption communication, along with testing and validation.",
+    "crumbs": [
+      "Ownership Scenarios",
+      "Service Interruption"
+    ]
+  },
+  {
+    "objectID": "scenario-service-interruption.html#what-is-an-interruption",
+    "href": "scenario-service-interruption.html#what-is-an-interruption",
+    "title": "Scenario: Service experiences an interruption",
+    "section": "",
+    "text": "An interruption could be either scheduled, for example due to scheduled maintenance or redeployment of an application, or it could be unscheduled, when an unexpected issue arises in either the application or an upstream component. Scheduled interruptions should be kept to a minimum (both in frequency and duration), and our infrastructure should be designed to prevent the need for such interruptions where possible. While the workflow is unique for a scheduled versus unscheduled interruption, there is a similar emphasis on the need for pre and post interruption communication, along with testing and validation.",
+    "crumbs": [
+      "Ownership Scenarios",
+      "Service Interruption"
+    ]
+  },
+  {
+    "objectID": "scenario-service-interruption.html#unscheduled-interruptions",
+    "href": "scenario-service-interruption.html#unscheduled-interruptions",
+    "title": "Scenario: Service experiences an interruption",
+    "section": "Unscheduled interruptions",
+    "text": "Unscheduled interruptions\nWhere possible service development should embrace the basic Agile quality practice of shifting learning left (https://scaledagileframework.com/built-in-quality/). While unexpected interruptions or bugs will occur, their impact can be mitigated by rigorous testing prior to, during and after deployment, along with health checks and metric gathering. The desired outcome is to identify and mitigate unscheduled interruptions as soon as possible, preferably before end-users encounter them.\n\nDiscovering an unscheduled interruption:\nThe following mechanisms for discovery of an unscheduled service interruption are loosely ordered from the earliest point at which an issue arises:\n\nHealth checks in UAT and production environments. (E.g., CloudWatch and/or Cloud Metrics. Potentially also configured to report to the Status Application; see onboarding documentation).\nData provider testing (in UAT and production).\nInternal Slack messages from other EOSDIS teams. Each service should provide clear guidance to these teams to know where they can reach out for help.\nUser reported issue via:\n\nEarthdata Forum\nGitHub issues\nEarthdata support email (support@earthdata.nasa.gov)\n\n\n\n\nWorkflow\n\n\n\n\n\n\nFigure 1: Unscheduled service interruption workflow",
+    "crumbs": [
+      "Ownership Scenarios",
+      "Service Interruption"
+    ]
+  },
+  {
+    "objectID": "project-structure.html",
+    "href": "project-structure.html",
+    "title": "Project Structure and Architecture",
+    "section": "",
+    "text": "Figure 1: Project Structure adapted from EOSDIS General Open Source Software Collaboration and Contribution Process: This diagram lays out the relationships between the various roles across our cloud data services community, showing how each role interacts at a high level.",
+    "crumbs": [
+      "Project Structure"
+    ]
+  },
+  {
+    "objectID": "project-structure.html#organizational-model",
+    "href": "project-structure.html#organizational-model",
+    "title": "Project Structure and Architecture",
+    "section": "",
+    "text": "Figure 1: Project Structure adapted from EOSDIS General Open Source Software Collaboration and Contribution Process: This diagram lays out the relationships between the various roles across our cloud data services community, showing how each role interacts at a high level.",
+    "crumbs": [
+      "Project Structure"
+    ]
+  },
+  {
+    "objectID": "project-structure.html#cloud-data-services-landscape",
+    "href": "project-structure.html#cloud-data-services-landscape",
+    "title": "Project Structure and Architecture",
+    "section": "Cloud Data Services Landscape",
+    "text": "Cloud Data Services Landscape\n\n\n\n\n\n\nFigure 2: Earthdata Cloud services architecture across programmatic services, clients, and user interfaces. Dashed lines are used to distinguish the crossing over another solid line. Earthdata Login is not indicated here for simplicity. Note: This is incomplete as of 18 March 2024 and will continue to be refined in future iterations.",
+    "crumbs": [
+      "Project Structure"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Cloud Data Services Governance Model",
+    "section": "",
+    "text": "This Governance Model provides community development guidance for NASA Earthdata Cloud Data Services with the goals of:\n\nEstablishing roles and responsibilities for contributions to cloud services.\nIdentifying key communication flows, as well as information on documentation, testing, and deployment paradigms.\nOutlining high-level process expectations for contributions.\nProviding example process flows and ownership scenarios for cloud service contributions.\n\nFor the purposes of this document, we define and scope our community to the teams within the NASA DAACs and EED-3 contract supporting the data, services, and applications managed under NASA ESDIS. See our Definitions section for more information.\nOur core values and best practices are modelled from the ESDS Community Development Best Practices Guide, with inspiration from many other successful open source communities (see Resources). Our goals and process guidelines are also inspired by the EOSDIS General Open Source Software Collaboration and Contribution Process guide.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "Cloud Data Services Governance Model",
+    "section": "",
+    "text": "This Governance Model provides community development guidance for NASA Earthdata Cloud Data Services with the goals of:\n\nEstablishing roles and responsibilities for contributions to cloud services.\nIdentifying key communication flows, as well as information on documentation, testing, and deployment paradigms.\nOutlining high-level process expectations for contributions.\nProviding example process flows and ownership scenarios for cloud service contributions.\n\nFor the purposes of this document, we define and scope our community to the teams within the NASA DAACs and EED-3 contract supporting the data, services, and applications managed under NASA ESDIS. See our Definitions section for more information.\nOur core values and best practices are modelled from the ESDS Community Development Best Practices Guide, with inspiration from many other successful open source communities (see Resources). Our goals and process guidelines are also inspired by the EOSDIS General Open Source Software Collaboration and Contribution Process guide.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#values",
+    "href": "index.html#values",
+    "title": "Cloud Data Services Governance Model",
+    "section": "Values",
+    "text": "Values\nThe development community for Earthdata Cloud Services was built around the core principle of “sharing is caring.” The NASA Earthdata Cloud provides us with an opportunity to not only make it easier for scientists to retrieve the data they need, but also to reduce barriers for code reuse and sharing of domain knowledge. We also embrace agility, and accept that it’s okay not knowing all the answers today as long as we work together to identify challenges and develop solutions. We share the same values as the ESDS Community Development Best Practices Guide and NASA’s Open Source Science Initiative. For more details please visit those pages.\nAdditionally, we recognize that a successful project hinges on open, collaborative communication in order to foster trust across our community. We additionally uphold these principles in all aspects of our work:\n\nMake Everyone Feel Welcome\nBe Responsive\nGive More Than You Take",
+    "crumbs": [
+      "Home"
     ]
   }
 ]
