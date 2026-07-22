@@ -21,6 +21,4 @@ Data providers and testers at the DAACs need to be able to easily understand the
 
 ### Workflow:
 
-![General feature development workflow for Earthdata Cloud data services](./graphics/general-service.png){#fig-general-service}
-
-![Feature development workflow for NASA Harmony](./graphics/harmony-backend-service.png){#fig-harmony-service}
+![General feature development workflow for Earthdata Cloud data services](./graphics/service-new-feature.png){#fig-service-new-feature}
