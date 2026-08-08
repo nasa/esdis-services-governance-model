@@ -2,14 +2,16 @@
 title: "Definitions"
 ---
 
-| Term | Defintion |
+| Term | Definition |
 |:-----|:----------|
 | DAAC | Distributed Active Archive Center |
+| Data Provider | Person responsible for getting data into the services |
 | EED-3 | EOSDIS Evolution and Development-3 |
 | EOSDIS | Earth Observing System Data and Information System |
 | ESDIS Project| Earth Science Data and Information System Project |
 | ESDS | Earth Science Data System |
-| SAFe |  Scaled Agile Framework |
+| SAFe | Scaled Agile Framework |
+| Service Curator | Person developing and maintaining a service |
 | SIT | System Integration Testing |
 | TRT | Transformation Train |
 | UAT | User Acceptance Testing |
