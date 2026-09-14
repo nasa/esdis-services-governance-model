@@ -5,7 +5,7 @@ title: "Roles and Responsibilities"
 ## Everyone
 
 * Communicate, communicate, communicate. Especially for new releases and regression test failures.
-* Fix regression test failures quickly. Work with impacted team(s)/DAAC(s) to ensure need-by dates are met depending on bug criticality.
+* Fix regression test failures quickly. Work with impacted team(s)/data provider(s) to ensure need-by dates are met depending on bug criticality.
 * Respond to PRs quickly.
 * Respond to questions in Slack, via email, or GitHub quickly. If you don’t know the answer but know someone who does, connect with them!
 * Move the whole community forward by submitting JIRA tickets and/or fixing problems yourself by submitting PRs!
@@ -20,16 +20,16 @@ title: "Roles and Responsibilities"
 * Provide other SAFe trains with requirements needed for our cloud services.
 * Communicate and prioritize features for cloud services, as well as dependent features on Search and Discovery Train.
 * Facilitate communication within TRT and across SAFe teams.
-* Utilize the Enterprise Priority List to ensure DAAC-reported bug tickets are prioritised by the appropriate development teams. Train leadership should:
-  * Regularly check for new tickets that match the Transformation Train priority filter, and ensure this work is appropriately assigned and prioritised.
-  * Communicate with other trains to ensure tickets from Transformation Train teams to an external train team are being prioritised and worked.
+* Utilize the Enterprise Priority List to ensure data provider-reported bug tickets are prioritized by the appropriate development teams. Train leadership should:
+  * Regularly check for new tickets that match the Transformation Train priority filter, and ensure this work is appropriately assigned and prioritized.
+  * Communicate with other trains to ensure tickets from Transformation Train teams to an external train team are being prioritized and worked.
   * Facilitate good communication between stakeholders and (potentially multiple) development teams.
 
 ## Service Team
 
 * Schedule software releases at a regular cadence, nominally every two weeks.
   * Communicate those releases in the slack channel(s) listed on the [Transformation Train Org](https://wiki.earthdata.nasa.gov/display/EPS/Transformation+Train+Org) page, including breaking changes (e.g., API or message schema changes)
-  * Coordinate with DAACs to ensure testing or support materials are tested and updated upon release.
+  * Coordinate with data providers to ensure testing or support materials are tested and updated upon release.
 * Establish automated monitoring for your service or application:
   * Ensure Uptrends is set up such that all endpoints are being monitored and your team is receiving outage notifications. To request permissions to use and configure this tool, submit an [Earthdata Service Desk](https://bugs.earthdata.nasa.gov/servicedesk/customer/portal/5/create/16) ticket with “Uptrends” selected.
 * Strive for 99.9% operational uptime availability. If your service experiences an interruption:
@@ -37,8 +37,8 @@ title: "Roles and Responsibilities"
   * Work to regain nominal operations as your team's top priority
   * For more information see Common Ownership Scenario 2.
 * Support usage metrics in the Cloud Metrics system. Work with train leads to prioritize Cloud Metrics onboarding if this is not already established.
-* Maintain a set of sample data in all testing (SIT and UAT) environments. These data should be sufficient to enable testing of all features of the service, allowing your service team to work independently from DAAC-hosted data. It is not required (or indeed feasible) for the service team to maintain sample data representing all potential collections that could be associated with the service.
-* Identify appropriate sample data in production that can be used for testing, particularly regression testing. Such data are likely to be hosted by the DAAC and should be identified based on the ability to exercise the feature of the service, while having a high likelihood that the data will persist in the same state in the long-term.
+* Maintain a set of sample data in all testing (SIT and UAT) environments. These data should be sufficient to enable testing of all features of the service, allowing your service team to work independently from data provider-hosted data. It is not required (or indeed feasible) for the service team to maintain sample data representing all potential collections that could be associated with the service.
+* Identify appropriate sample data in production that can be used for testing, particularly regression testing. Such data are likely to be hosted by the data provider and should be identified based on the ability to exercise the feature of the service, while having a high likelihood that the data will persist in the same state in the long-term.
 * Support end-users by:
   * Setting up a Zendesk for your service
   * Connecting your service to the Earthdata Forum:
@@ -49,7 +49,7 @@ title: "Roles and Responsibilities"
 * Ensure built-in quality for your services:
   * Cloud hosted services are expected to scan requirements files for vulnerabilities with the NASA ESDIS Snyk instance. This includes, for example, pip or conda requirements files for Python-based projects, or package.json for Node.JS projects. [Any resolvable vulnerabilities detected by Snyk that are classified as “critical” or “high” severity should be fixed within 15 days](https://wiki.earthdata.nasa.gov/display/ESKB/Security+Guidance+for+Dependency+Vulnerabilities+-+Snyk).
   * Unit test coverage is expected to meet the minimum threshold of 80%, with passing tests being a blocking requirement for merging pull requests in the CI/CD pipeline for the source code repository.
-* Strive to make the service generic, avoiding dataset-specific branches of code within the service where possible. This also facilitates easier maintenance as services expand to provide transformation of datasets from multiple DAACs.
+* Strive to make the service generic, avoiding dataset-specific branches of code within the service where possible. This also facilitates easier maintenance as services expand to provide transformation of datasets from multiple data providers.
 
 ## Dataset Owners
 
