@@ -6,7 +6,7 @@ The Harmony service development workflow includes unique interactions between th
 
 ### Publishing and releasing a new version of a service:
 
-Data providers and testers at the DAACs need to be able to easily understand the features (tickets) contained in each release of a service. To achieve this:
+Data providers, service curators, and train leadership need to be able to easily understand the features (tickets) contained in each release of a service. To achieve this:
 
 * Please include commit history in the GitHub release notes. For an example on release note generation, please see [this script](https://github.com/nasa/harmony-regridding-service/blob/main/bin/extract-release-notes.sh).
 * When announcing a release of a published service version to a Harmony environment in the harmony-service-providers Slack channel, please either include the exact release notes from GitHub and/or include a link to the GitHub release page.
@@ -15,9 +15,9 @@ Data providers and testers at the DAACs need to be able to easily understand the
 
 ### Deployment Cycle:
 
-* SIT - should receive all new published artefacts in order to allow service maintainers to test the new version of the service.
-* UAT - artefacts will be promoted to UAT on successful SIT testing.
-* Production - artefacts to be promoted to production following successful stakeholder testing in UAT or 2 weeks, whichever is sooner. **Exception: failed tests in UAT blocks promotion to production.**
+* SIT - should receive all new published artifacts in order to allow service maintainers to test the new version of the service.
+* UAT - artifacts will be promoted to UAT on successful SIT testing.
+* Production - artifacts to be promoted to production following successful stakeholder testing in UAT or 2 weeks, whichever is sooner. **Exception: failed tests in UAT blocks promotion to production.**
 
 ### Workflow:
 
